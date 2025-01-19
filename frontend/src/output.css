@@ -173,7 +173,8 @@ body {
   margin: 0;
   /* 1 */
   line-height: inherit;
-  /* 2 */
+  background: linear-gradient(135deg, #9c96e6, #84cc16);
+  background-size: 200% 200%;
 }
 
 /*
