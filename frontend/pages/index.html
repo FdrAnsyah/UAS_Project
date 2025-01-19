@@ -8,87 +8,135 @@
   </head>
   <body>
     <!-- Navbar -->
-    <div class="fixed w-full bg-white/80 backdrop-blur-sm py-6 transition-all duration-300 ease-in-out shadow-lg z-50">
-      <div class="container mx-auto max-w-screen-xl px-4 md:px-0">
-        <div class="flex justify-between items-center">
-          <!-- Bagian kiri -->
-          <div>
-            <h2 class="font-bold text-lime-500 text-2xl uppercase hover:scale-105 transition-all duration-300">Pus<span class="text-slate-800">Kesmas</span></h2>
-          </div>
+<!-- Navbar -->
+<div class="fixed w-full bg-white/80 backdrop-blur-sm py-6 transition-all duration-300 ease-in-out shadow-lg z-50">
+  <div class="container mx-auto max-w-screen-xl px-4 md:px-0">
+    <div class="flex justify-between items-center">
+      <!-- Bagian kiri -->
+      <div>
+        <h2 class="font-bold text-lime-500 text-2xl uppercase hover:scale-105 transition-all duration-300">Pus<span class="text-slate-800">Kesmas</span></h2>
+      </div>
 
-          <!-- Bagian tengah -->
-          <div id="navbarMenu" class="hidden md:block">
-            <ul class="bg-white/80 px-4 md:px-0 space-y-2 md:space-y-0 absolute top-full py-6 left-0 right-0 md:relative md:flex md:space-x-6 text-lg font-sans text-slate-800 capitalize z-50">
-              <li>
-                <a href="" class="text-lime-500 text-sm relative group">
-                  <span class="relative">
-                    Home
-                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-lime-500 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="" class="hover:text-lime-500 text-sm relative group">
-                  <span class="relative">
-                    Layanan Dalam Gedung
-                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-lime-500 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="" class="hover:text-lime-500 text-sm relative group">
-                  <span class="relative">
-                    Layanan Luar Gedung
-                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-lime-500 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="" class="hover:text-lime-500 text-sm relative group">
-                  <span class="relative">
-                    Tentang 
-                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-lime-500 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="" class="hover:text-lime-500 text-sm relative group">
-                  <span class="relative">
-                    Berita
-                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-lime-500 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="" class="hover:text-lime-500 text-sm relative group">
-                  <span class="relative">
-                    Contact
-                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-lime-500 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-                  </span>
-                </a>
-              </li>
-              <li>
-                <a href="./login.html" class="hover:text-lime-500 text-sm relative group">
-                  <span class="relative">
-                    Login
-                    <span class="absolute bottom-0 left-0 w-full h-0.5 bg-lime-500 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
-                  </span>
-                </a>
-              </li>
-            </ul>
-          </div>
-
-          <!-- Hamburger Menu -->
-          <div class="md:hidden">
-            <button id="burgerMenu" class="space-y-2 group">
-              <span class="bg-slate-800 w-[30px] h-[2px] block transition-all duration-300 group-hover:w-[25px]"></span>
-              <span class="bg-slate-800 w-[30px] h-[2px] block"></span>
-              <span class="bg-slate-800 w-[30px] h-[2px] block transition-all duration-300 group-hover:w-[25px]"></span>
+      <!-- Bagian tengah -->
+      <div id="navbarMenu" class="hidden md:block">
+        <ul class="bg-white/80 px-4 md:px-0 space-y-2 md:space-y-0 absolute top-full py-6 left-0 right-0 md:relative md:flex md:space-x-6 text-lg font-sans text-slate-800 capitalize z-50">
+          <li>
+            <a href="" class="text-lime-500 text-sm relative group">
+              <span class="relative">
+                Home
+                <span class="absolute bottom-0 left-0 w-full h-0.5 bg-lime-500 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+              </span>
+            </a>
+          </li>
+          
+          <!-- Dropdown Layanan Dalam Gedung -->
+          <li class="relative group">
+            <button class="hover:text-lime-500 text-sm flex items-center space-x-1 group">
+              <span class="relative">
+                Layanan Dalam Gedung
+                <span class="absolute bottom-0 left-0 w-full h-0.5 bg-lime-500 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+              </span>
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
             </button>
-          </div>
-        </div>
+            <div class="absolute hidden group-hover:block w-72 bg-white shadow-lg rounded-lg mt-2 py-2 z-50">
+              <div class="grid grid-cols-1 gap-2">
+                <a href="#" class="px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Klaster Manajemen</a>
+                <a href="#" class="px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Klaster Pelayanan Kesehatan Ibu dan Anak</a>
+                <a href="#" class="px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Klaster Pelayanan Kesehatan Usia Dewasa dan Lanjut</a>
+                <a href="#" class="px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Klaster Penanggulangan Penyakit Menular</a>
+                <a href="#" class="px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Lintas Klaster</a>
+                <a href="#" class="px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Layanan Khusus</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Dropdown Layanan Luar Gedung -->
+          <li class="relative group">
+            <button class="hover:text-lime-500 text-sm flex items-center space-x-1 group">
+              <span class="relative">
+                Layanan Luar Gedung
+                <span class="absolute bottom-0 left-0 w-full h-0.5 bg-lime-500 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+              </span>
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="absolute hidden group-hover:block w-80 bg-white shadow-lg rounded-lg mt-2 py-2 z-50">
+              <div class="grid grid-cols-1 gap-2">
+                <a href="#" class="px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Upaya Kesehatan Masyarakat Esensial</a>
+                <a href="#" class="px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Program Pencegahan dan Pengendalian Penyakit</a>
+                <a href="#" class="px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Upaya Kesehatan Masyarakat Pengembangan</a>
+              </div>
+            </div>
+          </li>
+
+          <!-- Dropdown Tentang Kami -->
+          <li class="relative group">
+            <button class="hover:text-lime-500 text-sm flex items-center space-x-1 group">
+              <span class="relative">
+                Tentang Kami
+                <span class="absolute bottom-0 left-0 w-full h-0.5 bg-lime-500 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+              </span>
+              <svg class="w-4 h-4 transition-transform group-hover:rotate-180" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"></path>
+              </svg>
+            </button>
+            <div class="absolute hidden group-hover:block w-48 bg-white shadow-lg rounded-lg mt-2 py-2 z-50 right-0">
+              <div class="grid grid-cols-1 gap-2">
+                <a href="#" class="px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Profil Puskesmas</a>
+                <a href="#" class="px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Visi dan Misi</a>
+                <a href="#" class="px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Fasilitas Kami</a>
+                <a href="#" class="px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Kinerja Puskesmas</a>
+                <a href="#" class="px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Kontak Kami</a>
+                <a href="#" class="px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">CSR</a>
+              </div>
+            </div>
+          </li>
+
+          <li>
+            <a href="" class="hover:text-lime-500 text-sm relative group">
+              <span class="relative">
+                Berita
+                <span class="absolute bottom-0 left-0 w-full h-0.5 bg-lime-500 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="" class="hover:text-lime-500 text-sm relative group">
+              <span class="relative">
+                Contact
+                <span class="absolute bottom-0 left-0 w-full h-0.5 bg-lime-500 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+              </span>
+            </a>
+          </li>
+
+          <li>
+            <a href="./login.html" class="hover:text-lime-500 text-sm relative group">
+              <span class="relative">
+                Login
+                <span class="absolute bottom-0 left-0 w-full h-0.5 bg-lime-500 transform origin-left scale-x-0 transition-transform duration-300 group-hover:scale-x-100"></span>
+              </span>
+            </a>
+          </li>
+        </ul>
+      </div>
+
+      <!-- Hamburger Menu -->
+      <div class="md:hidden">
+        <button id="burgerMenu" class="space-y-2 group">
+          <span class="bg-slate-800 w-[30px] h-[2px] block transition-all duration-300 group-hover:w-[25px]"></span>
+          <span class="bg-slate-800 w-[30px] h-[2px] block"></span>
+          <span class="bg-slate-800 w-[30px] h-[2px] block transition-all duration-300 group-hover:w-[25px]"></span>
+        </button>
       </div>
     </div>
+  </div>
+</div>
+<!-- Navbar End -->
+    <!-- Navbar End -->
 
     <!-- Bagian Hero -->
     <div id="hero" class="w-full bg-white pt-40 pb-16">
@@ -274,7 +322,8 @@
     
     <!-- Bagian Content end -->
 
-    <script>
+    <script src="../src/main.js"></script>
+    <!-- <script>
       // Add scroll event listener
       window.addEventListener('scroll', function () {
         const navbar = document.querySelector('.fixed');
@@ -294,6 +343,6 @@
       burgerMenu.addEventListener('click', () => {
         navbarMenu.classList.toggle('hidden');
       });
-    </script>
+    </script> -->
   </body>
 </html>
