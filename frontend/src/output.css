@@ -173,8 +173,6 @@ body {
   margin: 0;
   /* 1 */
   line-height: inherit;
-  background-color: linear-gradient (176deg, #0e8f1d00, #84cc16, #facc15);
-  background-size: 200% 200%;
 }
 
 /*
