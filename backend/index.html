@@ -5,10 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Admin Dashboard</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css"
-      rel="stylesheet"
-    />
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
     <style>
       .fade-in {
         animation: fadeIn 0.3s ease-in;
@@ -25,83 +22,36 @@
   </head>
   <body class="bg-gray-100">
     <!-- Sidebar -->
-    <aside
-      id="sidebar"
-      class="fixed inset-y-0 left-0 bg-white shadow-lg w-64 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-20"
-    >
+    <aside id="sidebar" class="fixed inset-y-0 left-0 bg-white shadow-lg w-64 transform -translate-x-full md:translate-x-0 transition-transform duration-300 ease-in-out z-20">
       <div class="flex items-center justify-between p-4 border-b">
         <div class="flex items-center space-x-3">
-          <div
-            class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center"
-          >
-            <img
-              src="../frontend/pages/images/logo haza.png"
-              alt=""
-              srcset=""
-            />
+          <div class="w-8 h-8 bg-blue-600 rounded-lg flex items-center justify-center">
+            <img src="../frontend/pages/images/logo haza.png" alt="" srcset="" />
           </div>
           <h1 class="text-xl font-bold text-gray-800">HazaAdmin</h1>
         </div>
-        <button
-          onclick="toggleSidebar()"
-          class="md:hidden text-gray-500 hover:text-gray-700"
-        >
+        <button onclick="toggleSidebar()" class="md:hidden text-gray-500 hover:text-gray-700">
           <i class="fas fa-times text-xl"></i>
         </button>
       </div>
 
       <nav class="mt-4">
         <div class="px-4 py-2">
-          <p class="text-xs uppercase tracking-wider text-gray-500">
-            Main Menu
-          </p>
+          <p class="text-xs uppercase tracking-wider text-gray-500">Main Menu</p>
         </div>
-        <a
-          href="#"
-          onclick="showDashboard()"
-          class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-100 transition-colors duration-200"
-        >
+        <a href="#" onclick="showDashboard()" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-100 transition-colors duration-200">
           <i class="fas fa-home w-5 mr-3"></i>
           Dashboard
         </a>
-        <a
-          href="#"
-          onclick="showUsers()"
-          class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-100 transition-colors duration-200"
-        >
+        <a href="#" onclick="showUsers()" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-100 transition-colors duration-200">
           <i class="fas fa-users w-5 mr-3"></i>
           Data Pegawai
         </a>
-        <a
-          href="#"
-          onclick="showPasien()"
-          class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-100 transition-colors duration-200"
-        >
+        <a href="#" onclick="showPasien()" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-100 transition-colors duration-200">
           <i class="fas fa-user w-5 mr-3"></i>
-          Daftar Pasien
+          Data Pasien
         </a>
-        <div class="px-4 py-2 mt-4">
-          <p class="text-xs uppercase tracking-wider text-gray-500">Settings</p>
-        </div>
-        <a
-          href="#"
-          class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-100 transition-colors duration-200"
-        >
-          <i class="fas fa-chart-bar w-5 mr-3"></i>
-          Analytics
-        </a>
-        <a
-          href="#"
-          class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-100 transition-colors duration-200"
-        >
-          <i class="fas fa-cog w-5 mr-3"></i>
-          Settings
-        </a>
-        <a
-          href="#"
-          onclick="logout()"
-          class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-100 transition-colors duration-200"
-        >
+        <a href="#" onclick="logout()" class="flex items-center px-4 py-3 text-gray-600 hover:bg-gray-100 transition-colors duration-200">
           <i class="fa-solid fa-right-from-bracket w-5 mr-3"></i>
           Log Out
         </a>
@@ -113,20 +63,13 @@
       <!-- Top Navigation -->
       <header class="bg-white shadow-sm sticky top-0">
         <div class="flex items-center justify-between px-4 py-3">
-          <button
-            onclick="toggleSidebar()"
-            class="md:hidden text-gray-500 hover:text-gray-700"
-          >
+          <button onclick="toggleSidebar()" class="md:hidden text-gray-500 hover:text-gray-700">
             <i class="fas fa-bars text-xl"></i>
           </button>
 
           <div class="flex-1 mx-4">
             <div class="relative max-w-md">
-              <input
-                type="text"
-                placeholder="Search..."
-                class="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500"
-              />
+              <input type="text" placeholder="Search..." class="w-full pl-10 pr-4 py-2 rounded-lg border border-gray-300 focus:outline-none focus:border-blue-500 focus:ring-1 focus:ring-blue-500" />
               <i class="fas fa-search absolute left-3 top-3 text-gray-400"></i>
             </div>
           </div>
@@ -134,18 +77,10 @@
           <div class="flex items-center gap-4">
             <button class="relative hover:bg-gray-100 p-2 rounded-full">
               <i class="fas fa-bell text-xl text-gray-600"></i>
-              <span
-                class="absolute top-1 right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center"
-              >
-                3
-              </span>
+              <span class="absolute top-1 right-1 bg-red-500 text-white text-xs rounded-full h-4 w-4 flex items-center justify-center"> 3 </span>
             </button>
             <div class="flex items-center space-x-3 border-l pl-4">
-              <img
-                src="../frontend/pages/images/profile_haza.png"
-                alt="User"
-                class="h-8 w-8 rounded-full border-2 border-blue-500"
-              />
+              <img src="../frontend/pages/images/profile_haza.png" alt="User" class="h-8 w-8 rounded-full border-2 border-blue-500" />
               <div class="hidden md:block">
                 <p class="text-sm font-medium text-gray-800">Admin Puskesmas</p>
                 <p class="text-xs text-gray-500">haza.puskesmas@gmail.com</p>
@@ -156,129 +91,56 @@
       </header>
 
       <!-- Dashboard Content -->
-      <div id="dashboard-content" class="p-6 fade-in">
+      <div id="dashboard-content" class="p-6 fade-in hover:shadow-lg">
         <!-- Stats Grid -->
         <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-6">
-          <div
-            class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-6"
-          >
+          <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-6">
             <div class="flex justify-between items-center">
-              <h3 class="text-gray-500 text-sm font-medium">
-                Jumlah Pengunjung
-              </h3>
-              <i
-                class="fas fa-users text-blue-500 bg-blue-100 p-2 rounded-full"
-              ></i>
+              <h3 class="text-gray-500 text-sm font-medium">Jumlah Pengunjung</h3>
+              <i class="fas fa-users text-blue-500 bg-blue-100 p-2 rounded-full"></i>
             </div>
             <p class="text-2xl font-semibold text-gray-800 mt-2">1,234</p>
-            <p class="text-sm text-green-500 mt-2">
-              <i class="fas fa-arrow-up"></i> 12% increase
-            </p>
+            <p class="text-sm text-green-500 mt-2"><i class="fas fa-arrow-up"></i> 12% increase</p>
           </div>
-          <div
-            class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-6"
-          >
+          <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-6">
             <div class="flex justify-between items-center">
               <h3 class="text-gray-500 text-sm font-medium">Total Pemasukan</h3>
-              <i
-                class="fas fa-rupiah-sign text-green-500 bg-green-100 p-2 rounded-full"
-              ></i>
+              <i class="fas fa-rupiah-sign text-green-500 bg-green-100 p-2 rounded-full"></i>
             </div>
-            <p class="text-2xl font-semibold text-gray-800 mt-2">
-              Rp.129.324.100
-            </p>
-            <p class="text-sm text-green-500 mt-2">
-              <i class="fas fa-arrow-up"></i> 8% increase
-            </p>
+            <p class="text-2xl font-semibold text-gray-800 mt-2">Rp.129.324.100</p>
+            <p class="text-sm text-green-500 mt-2"><i class="fas fa-arrow-up"></i> 8% increase</p>
           </div>
-          <div
-            class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-6"
-          >
+          <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-6">
             <div class="flex justify-between items-center">
-              <h3 class="text-gray-500 text-sm font-medium">
-                Ruangan Perawatan Tersedia
-              </h3>
-              <i
-                class="fas fa-building text-purple-500 bg-purple-100 p-2 rounded-full"
-              ></i>
+              <h3 class="text-gray-500 text-sm font-medium">Ruangan Perawatan Tersedia</h3>
+              <i class="fas fa-building text-purple-500 bg-purple-100 p-2 rounded-full"></i>
             </div>
-            <p class="text-2xl font-semibold text-gray-800 mt-2">
-              Ruangan Perawatan Aktif: 4/20
-            </p>
-            <p class="text-sm text-red-500 mt-2">
-              <i class="fas fa-arrow-down"></i> 3% decrease
-            </p>
+            <p class="text-2xl font-semibold text-gray-800 mt-2">Ruangan Perawatan Aktif: 4/20</p>
+            <p class="text-sm text-red-500 mt-2"><i class="fas fa-arrow-down"></i> 3% decrease</p>
           </div>
-          <div
-            class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-6"
-          >
+          <div class="bg-white rounded-lg shadow-sm hover:shadow-md transition-shadow duration-200 p-6">
             <div class="flex justify-between items-center">
-              <h3 class="text-gray-500 text-sm font-medium">
-                Rasio Pasien Baru
-              </h3>
-              <i
-                class="fas fa-user text-yellow-500 bg-yellow-100 p-2 rounded-full"
-              ></i>
+              <h3 class="text-gray-500 text-sm font-medium">Rasio Pasien Baru</h3>
+              <i class="fas fa-user text-yellow-500 bg-yellow-100 p-2 rounded-full"></i>
             </div>
             <p class="text-2xl font-semibold text-gray-800 mt-2">12.3%</p>
-            <p class="text-sm text-green-500 mt-2">
-              <i class="fas fa-arrow-up"></i> 5% increase
-            </p>
+            <p class="text-sm text-green-500 mt-2"><i class="fas fa-arrow-up"></i> 5% increase</p>
           </div>
         </div>
         <!-- calender -->
-        <div
-          class="calendar max-md mt-10 bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6"
-        >
+        <div class="calendar max-md mt-10 bg-white dark:bg-gray-700 rounded-xl shadow-lg p-6">
           <div class="calendar-header flex justify-between items-center mb-6">
-            <span
-              id="month-picker"
-              class="month-picker text-xl font-semibold cursor-pointer text-gray-800 dark:text-white hover:text-blue-500 dark:hover:text-blue-400 transition-colors"
-            >
-              February
-            </span>
+            <span id="month-picker" class="month-picker text-xl font-semibold cursor-pointer text-gray-800 dark:text-white hover:text-blue-500 dark:hover:text-blue-400 transition-colors"> February </span>
             <div class="year-picker flex items-center gap-4">
-              <span
-                id="prev-year"
-                class="year-change cursor-pointer text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M15 19l-7-7 7-7"
-                  />
+              <span id="prev-year" class="year-change cursor-pointer text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15 19l-7-7 7-7" />
                 </svg>
               </span>
-              <span
-                id="year"
-                class="text-lg font-medium text-gray-800 dark:text-white"
-                >2021</span
-              >
-              <span
-                id="next-year"
-                class="year-change cursor-pointer text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400"
-              >
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  class="h-5 w-5"
-                  fill="none"
-                  viewBox="0 0 24 24"
-                  stroke="currentColor"
-                >
-                  <path
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    stroke-width="2"
-                    d="M9 5l7 7-7 7"
-                  />
+              <span id="year" class="text-lg font-medium text-gray-800 dark:text-white">2021</span>
+              <span id="next-year" class="year-change cursor-pointer text-gray-600 dark:text-gray-300 hover:text-blue-500 dark:hover:text-blue-400">
+                <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7" />
                 </svg>
               </span>
             </div>
@@ -286,105 +148,59 @@
 
           <div class="calendar-body">
             <div class="calendar-week-day grid grid-cols-7 mb-4">
-              <div
-                class="text-center text-sm font-medium text-gray-500 dark:text-gray-400"
-              >
-                Sun
-              </div>
-              <div
-                class="text-center text-sm font-medium text-gray-500 dark:text-gray-400"
-              >
-                Mon
-              </div>
-              <div
-                class="text-center text-sm font-medium text-gray-500 dark:text-gray-400"
-              >
-                Tue
-              </div>
-              <div
-                class="text-center text-sm font-medium text-gray-500 dark:text-gray-400"
-              >
-                Wed
-              </div>
-              <div
-                class="text-center text-sm font-medium text-gray-500 dark:text-gray-400"
-              >
-                Thu
-              </div>
-              <div
-                class="text-center text-sm font-medium text-gray-500 dark:text-gray-400"
-              >
-                Fri
-              </div>
-              <div
-                class="text-center text-sm font-medium text-gray-500 dark:text-gray-400"
-              >
-                Sat
-              </div>
+              <div class="text-center text-sm font-medium text-gray-500 dark:text-gray-400">Sun</div>
+              <div class="text-center text-sm font-medium text-gray-500 dark:text-gray-400">Mon</div>
+              <div class="text-center text-sm font-medium text-gray-500 dark:text-gray-400">Tue</div>
+              <div class="text-center text-sm font-medium text-gray-500 dark:text-gray-400">Wed</div>
+              <div class="text-center text-sm font-medium text-gray-500 dark:text-gray-400">Thu</div>
+              <div class="text-center text-sm font-medium text-gray-500 dark:text-gray-400">Fri</div>
+              <div class="text-center text-sm font-medium text-gray-500 dark:text-gray-400">Sat</div>
             </div>
             <div class="calendar-days grid grid-cols-7 gap-2"></div>
           </div>
 
-          <div
-            class="month-list absolute top-full mt-2 left-0 right-0 bg-white dark:bg-gray-700 rounded-lg shadow-lg p-4 grid grid-cols-3 gap-4 hidden"
-          >
+          <div class="month-list absolute top-full mt-2 left-0 right-0 bg-white dark:bg-gray-700 rounded-lg shadow-lg p-4 grid grid-cols-3 gap-4 hidden">
             <!-- Month list will be populated by JavaScript -->
           </div>
         </div>
         <div class="bg-white rounded-lg shadow-sm mt-6">
           <div class="p-6">
             <div class="flex justify-between items-center mb-4">
-              <h2 class="text-lg font-semibold text-gray-800">
-                Aktivitas Terbaru
-              </h2>
-              <button class="text-blue-500 hover:text-blue-600">
-                View All
-              </button>
+              <h2 class="text-lg font-semibold text-gray-800">Aktivitas Terbaru</h2>
+              <button class="text-blue-500 hover:text-blue-600">View All</button>
             </div>
             <!-- aktivitas -->
             <div class="space-y-4">
-              <div
-                class="flex items-center py-3 border-b hover:bg-gray-50 rounded-lg px-3"
-              >
+              <div class="flex items-center py-3 border-b hover:bg-gray-50 rounded-lg px-3">
                 <div class="bg-blue-100 rounded-full p-2 mr-4">
                   <i class="fas fa-user-plus text-blue-600"></i>
                 </div>
                 <div class="flex-1">
-                  <p class="text-sm font-medium text-gray-800">
-                    Pendaftaran Pasien Baru
-                  </p>
+                  <p class="text-sm font-medium text-gray-800">Pendaftaran Pasien Baru</p>
                   <p class="text-sm text-gray-500">2 minutes lalu</p>
                 </div>
                 <button class="text-gray-400 hover:text-gray-600">
                   <i class="fas fa-chevron-right"></i>
                 </button>
               </div>
-              <div
-                class="flex items-center py-3 border-b hover:bg-gray-50 rounded-lg px-3"
-              >
+              <div class="flex items-center py-3 border-b hover:bg-gray-50 rounded-lg px-3">
                 <div class="bg-green-100 rounded-full p-2 mr-4">
                   <i class="fas fa-stethoscope text-green-600"></i>
                 </div>
                 <div class="flex-1">
-                  <p class="text-sm font-medium text-gray-800">
-                    Konsultasi Dokter
-                  </p>
+                  <p class="text-sm font-medium text-gray-800">Konsultasi Dokter</p>
                   <p class="text-sm text-gray-500">5 menit lalu</p>
                 </div>
                 <button class="text-gray-400 hover:text-gray-600">
                   <i class="fas fa-chevron-right"></i>
                 </button>
               </div>
-              <div
-                class="flex items-center py-3 hover:bg-gray-50 rounded-lg px-3"
-              >
+              <div class="flex items-center py-3 hover:bg-gray-50 rounded-lg px-3">
                 <div class="bg-yellow-100 rounded-full p-2 mr-4">
                   <i class="fas fa-star text-yellow-600"></i>
                 </div>
                 <div class="flex-1">
-                  <p class="text-sm font-medium text-gray-800">
-                    New review added
-                  </p>
+                  <p class="text-sm font-medium text-gray-800">New review added</p>
                   <p class="text-sm text-gray-500">10 memit lalu</p>
                 </div>
                 <button class="text-gray-400 hover:text-gray-600">
@@ -397,40 +213,25 @@
       </div>
 
       <!-- Users Content (Initially Hidden) -->
-      <div id="users-content" class="p-6 hidden">
+      <div id="users-content" class="p-6 hidden fade-in hover:shadow-md transition-shadow duration-200">
         <div class="bg-white rounded-lg shadow-sm">
           <div class="p-6">
             <!-- Header with Add button -->
             <div class="flex justify-between items-center mb-4">
               <h2 class="text-lg font-semibold text-gray-800">Data Pegawai</h2>
-              <button
-                onclick="openModal()"
-                class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
-              >
-                Tambah
-              </button>
+              <button onclick="openModal()" class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg">Tambah</button>
             </div>
-      
+
             <!-- Table -->
             <div class="overflow-x-auto">
               <table class="min-w-full">
                 <thead>
                   <tr class="bg-gray-50">
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Nama
-                    </th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Spsesialis
-                    </th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Nomer Telpon
-                    </th>
-                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Alamat
-                    </th>
-                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">
-                      Actions
-                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nama</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Spsesialis</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Nomer Telpon</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Alamat</th>
+                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
                   </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
@@ -440,54 +241,30 @@
             </div>
           </div>
         </div>
-      
+
         <!-- Add Employee Modal -->
-        <div id="addModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4">
+        <div id="addModal" class="fixed inset-0 bg-black bg-opacity-50 hidden items-center justify-center p-4 fade-in hover:shadow-md transition-shadow duration-200">
           <div class="bg-white rounded-lg w-full max-w-md">
             <div class="p-6">
               <div class="flex justify-between items-center mb-4">
                 <h3 class="text-lg font-semibold text-gray-800">Tambah Data Pegawai</h3>
-                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">
-                  ✕
-                </button>
+                <button onclick="closeModal()" class="text-gray-500 hover:text-gray-700">✕</button>
               </div>
-      
+
               <form id="employeeForm" class="space-y-4">
                 <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-1">
-                    Nama Lengkap
-                  </label>
-                  <input
-                    type="text"
-                    id="name"
-                    required
-                    class="w-full px-3 py-2 border border-gray-300 rounded-md"
-                    placeholder="Masukan nama lengkap"
-                  />
+                  <label class="block text-sm font-medium text-gray-700 mb-1"> Nama Lengkap </label>
+                  <input type="text" id="name" required class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="Nama lengkap" />
                 </div>
-      
+
                 <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-1">
-                    Email
-                  </label>
-                  <input
-                    type="email"
-                    id="email"
-                    required
-                    class="w-full px-3 py-2 border border-gray-300 rounded-md"
-                    placeholder="Masukan email"
-                  />
+                  <label class="block text-sm font-medium text-gray-700 mb-1"> Email </label>
+                  <input type="email" id="email" required class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="Masukan email" />
                 </div>
-      
+
                 <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-1">
-                    Spesialis
-                  </label>
-                  <select
-                    id="specialist"
-                    required
-                    class="w-full px-3 py-2 border border-gray-300 rounded-md"
-                  >
+                  <label class="block text-sm font-medium text-gray-700 mb-1"> Spesialis </label>
+                  <select id="specialist" required class="w-full px-3 py-2 border border-gray-300 rounded-md">
                     <option value="">Pilih Spesialis</option>
                     <option value="Spesialis Mata">Spesialis Mata</option>
                     <option value="Spesialis Paru">Spesialis Paru</option>
@@ -496,47 +273,20 @@
                     <option value="Spesialis Jantung">Spesialis Jantung</option>
                   </select>
                 </div>
-      
+
                 <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-1">
-                    Nomer Telpon
-                  </label>
-                  <input
-                    type="tel"
-                    id="phone"
-                    required
-                    class="w-full px-3 py-2 border border-gray-300 rounded-md"
-                    placeholder="Masukan nomer telpon"
-                  />
+                  <label class="block text-sm font-medium text-gray-700 mb-1"> Nomor Telpon </label>
+                  <input type="tel" id="phone" required class="w-full px-3 py-2 border border-gray-300 rounded-md" placeholder="Nomor telpon" />
                 </div>
-      
+
                 <div>
-                  <label class="block text-sm font-medium text-gray-700 mb-1">
-                    Alamat
-                  </label>
-                  <textarea
-                    id="address"
-                    required
-                    class="w-full px-3 py-2 border border-gray-300 rounded-md"
-                    rows="3"
-                    placeholder="Masukan alamat"
-                  ></textarea>
+                  <label class="block text-sm font-medium text-gray-700 mb-1"> Alamat </label>
+                  <textarea id="address" required class="w-full px-3 py-2 border border-gray-300 rounded-md" rows="3" placeholder="Masukan alamat"></textarea>
                 </div>
-      
+
                 <div class="flex justify-end space-x-3 mt-6">
-                  <button
-                    type="button"
-                    onclick="closeModal()"
-                    class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-[#ff0000] hover:text-white"
-                  >
-                    Batal
-                  </button>
-                  <button
-                    type="submit"
-                    class="px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-md hover:bg-blue-600"
-                  >
-                    Tambah Data
-                  </button>
+                  <button type="button" onclick="closeModal()" class="px-4 py-2 text-sm font-medium text-gray-700 bg-gray-100 rounded-md hover:bg-[#ff0000] hover:text-white">Batal</button>
+                  <button type="submit" class="px-4 py-2 text-sm font-medium text-white bg-blue-500 rounded-md hover:bg-blue-600">Tambah Data</button>
                 </div>
               </form>
             </div>
@@ -545,254 +295,116 @@
         <div class="bg-white rounded-lg shadow-sm mt-6">
           <div class="p-6">
             <div class="flex justify-between items-center mb-4">
-              <h2 class="text-lg font-semibold text-gray-800">
-                Data Pegawai
-              </h2>
+              <h2 class="text-lg font-semibold text-gray-800">Data Pegawai</h2>
             </div>
 
             <div class="overflow-x-auto">
               <table class="min-w-full">
                 <thead>
                   <tr class="bg-gray-50">
-                    <th
-                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                    >
-                      User
-                    </th>
-                    <th
-                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                    >
-                      Role
-                    </th>
-                    <th
-                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                    >
-                      Status
-                    </th>
-                    <th
-                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                    >
-                      Joined
-                    </th>
-                    <th
-                      class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                    >
-                      Actions
-                    </th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">User</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Role</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Joined</th>
+                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Actions</th>
                   </tr>
                 </thead>
                 <tbody class="bg-white divide-y divide-gray-200">
                   <tr class="hover:bg-gray-50">
                     <td class="px-6 py-4 whitespace-nowrap">
                       <div class="flex items-center">
-                        <img
-                          class="h-8 w-8 rounded-full"
-                          src="../frontend/pages/images/profile_admin.png"
-                          alt=""
-                        />
+                        <img class="h-8 w-8 rounded-full" src="../frontend/pages/images/profile_admin.png" alt="" />
                         <div class="ml-4">
-                          <div class="text-sm font-medium text-gray-900">
-                            dr. Robbanie Hillaly Kurniadien, SpM
-                          </div>
-                          <div class="text-sm text-gray-500">
-                            @IllalRajinNgoding
-                          </div>
+                          <div class="text-sm font-medium text-gray-900">dr. Robbanie Hillaly Kurniadien, SpM</div>
+                          <div class="text-sm text-gray-500">@IllalRajinNgoding</div>
                         </div>
                       </div>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap">
-                      <span
-                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800"
-                      >
-                        Spesialis Mata
-                      </span>
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800"> Spesialis Mata </span>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap">
-                      <span
-                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
-                      >
-                        Active
-                      </span>
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"> Active </span>
                     </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                    >
-                      Jan 22, 2021
-                    </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-                    >
-                      <button class="text-blue-600 hover:text-blue-900 mr-3">
-                        Edit
-                      </button>
-                      <button class="text-red-600 hover:text-red-900">
-                        Delete
-                      </button>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Jan 22, 2021</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                      <button class="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
+                      <button class="text-red-600 hover:text-red-900">Delete</button>
                     </td>
                   </tr>
                   <tr class="hover:bg-gray-50">
                     <td class="px-6 py-4 whitespace-nowrap">
                       <div class="flex items-center">
-                        <img
-                          class="h-8 w-8 rounded-full"
-                          src="../frontend/pages/images/profile_user.png"
-                          alt=""
-                        />
+                        <img class="h-8 w-8 rounded-full" src="../frontend/pages/images/profile_user.png" alt="" />
                         <div class="ml-4">
-                          <div class="text-sm font-medium text-gray-900">
-                            dr. Ferdiansyah, Sp.P
-                          </div>
-                          <div class="text-sm text-gray-500">
-                            @FdrAnsyah
-                          </div>
+                          <div class="text-sm font-medium text-gray-900">dr. Ferdiansyah, Sp.P</div>
+                          <div class="text-sm text-gray-500">@FdrAnsyah</div>
                         </div>
                       </div>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap">
-                      <span
-                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-800"
-                      >
-                        Spesialis Paru-Paru
-                      </span>
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-800"> Spesialis Paru-Paru </span>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap">
-                      <span
-                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
-                      >
-                        Active
-                      </span>
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"> Active </span>
                     </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                    >
-                      August 11, 2022
-                    </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-                    >
-                      <button class="text-blue-600 hover:text-blue-900 mr-3">
-                        Edit
-                      </button>
-                      <button class="text-red-600 hover:text-red-900">
-                        Delete
-                      </button>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">August 11, 2022</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                      <button class="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
+                      <button class="text-red-600 hover:text-red-900">Delete</button>
                     </td>
                   </tr>
                   <tr class="hover:bg-gray-50">
                     <td class="px-6 py-4 whitespace-nowrap">
                       <div class="flex items-center">
-                        <img
-                          class="h-8 w-8 rounded-full"
-                          src="../frontend/pages/images/profile_medis1.png"
-                          alt=""
-                        />
+                        <img class="h-8 w-8 rounded-full" src="../frontend/pages/images/profile_medis1.png" alt="" />
                         <div class="ml-4">
-                          <div class="text-sm font-medium text-gray-900">
-                            drg. Dzikra Aulia Syfa
-                          </div>
-                          <div class="text-sm text-gray-500">
-                            @dzikraauliasyfa
-                          </div>
+                          <div class="text-sm font-medium text-gray-900">drg. Dzikra Aulia Syfa</div>
+                          <div class="text-sm text-gray-500">@dzikraauliasyfa</div>
                         </div>
                       </div>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap">
-                      <span
-                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800"
-                      >
-                        Spesialis Gigi
-                      </span>
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800"> Spesialis Gigi </span>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap">
-                      <span
-                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800"
-                      >
-                        Active
-                      </span>
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800"> Active </span>
                     </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                    >
-                      Jan 11, 2022
-                    </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-                    >
-                      <button class="text-blue-600 hover:text-blue-900 mr-3">
-                        Edit
-                      </button>
-                      <button class="text-red-600 hover:text-red-900">
-                        Delete
-                      </button>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Jan 11, 2022</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                      <button class="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
+                      <button class="text-red-600 hover:text-red-900">Delete</button>
                     </td>
                   </tr>
                   <tr class="hover:bg-gray-50">
                     <td class="px-6 py-4 whitespace-nowrap">
                       <div class="flex items-center">
-                        <img
-                          class="h-8 w-8 rounded-full"
-                          src="../frontend/pages/images/profile_medis.jpg"
-                          alt=""
-                        />
+                        <img class="h-8 w-8 rounded-full" src="../frontend/pages/images/profile_medis.jpg" alt="" />
                         <div class="ml-4">
-                          <div class="text-sm font-medium text-gray-900">
-                            dr.Dinta Fridayanti,Sp.A
-                          </div>
-                          <div class="text-sm text-gray-500">
-                            @dintafridayanti
-                          </div>
+                          <div class="text-sm font-medium text-gray-900">dr.Dinta Fridayanti,Sp.A</div>
+                          <div class="text-sm text-gray-500">@dintafridayanti</div>
                         </div>
                       </div>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap">
-                      <span
-                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800"
-                      >
-                        Spesialis Anak
-                      </span>
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800"> Spesialis Anak </span>
                     </td>
                     <td class="px-6 py-4 whitespace-nowrap">
-                      <span
-                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800"
-                      >
-                        Pending
-                      </span>
+                      <span class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800"> Pending </span>
                     </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                    >
-                      Feb 13, 2024
-                    </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-                    >
-                      <button class="text-blue-600 hover:text-blue-900 mr-3">
-                        Edit
-                      </button>
-                      <button class="text-red-600 hover:text-red-900">
-                        Delete
-                      </button>
+                    <td class="px-6 py-4 whitespace-nowrap text-sm text-gray-500">Feb 13, 2024</td>
+                    <td class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium">
+                      <button class="text-blue-600 hover:text-blue-900 mr-3">Edit</button>
+                      <button class="text-red-600 hover:text-red-900">Delete</button>
                     </td>
                   </tr>
                 </tbody>
               </table>
-              <div
-                class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between"
-              >
-                <span class="text-xs xs:text-sm text-gray-900">
-                  Showing 1 to 4 of 50 Entries
-                </span>
+              <div class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between">
+                <span class="text-xs xs:text-sm text-gray-900"> Showing 1 to 4 of 50 Entries </span>
                 <div class="inline-flex mt-2 xs:mt-0">
-                  <button
-                    class="text-sm bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-l"
-                  >
-                    Prev
-                  </button>
-                  <button
-                    class="text-sm bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-r"
-                  >
-                    Next
-                  </button>
+                  <button class="text-sm bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-l">Prev</button>
+                  <button class="text-sm bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-r">Next</button>
                 </div>
               </div>
             </div>
@@ -801,261 +413,156 @@
       </div>
 
       <!-- Pasien Content -->
-      <div id="pasien-content" class="p-6 hidden fade-in">
+      <div id="pasien-content" class="p-6 hidden fade-in hover:shadow-md transition-shadow duration-200">
         <div class="bg-white rounded-lg shadow-sm">
-          <div class="p-6">
-            <div class="flex justify-between items-center mb-4">
-              <h2 class="text-lg font-semibold text-gray-800">Data Pasien</h2>
-              <button
-                class="bg-blue-500 hover:bg-blue-600 text-white px-4 py-2 rounded-lg"
-              >
-                <i class="fas fa-plus mr-2"></i>Add User
-              </button>
+          <div class="pt-6 px-6">
+            <!-- Header & Add Button -->
+            <div class="flex justify-between items-center mb-6">
+              <h2 class="text-xl font-semibold text-gray-800">Data Pasien</h2>
+              <button onclick="openPasienModal()" class="px-4 py-2 bg-blue-500 text-white rounded-lg hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2">Tambah Pasien</button>
             </div>
 
+            <!-- Search & Filter -->
+            <div class="mb-6 flex gap-4 flex-wrap">
+              <input type="text" id="searchPasien" placeholder="Cari pasien..." class="px-4 py-2 border rounded-lg focus:ring-blue-500 focus:border-blue-500" />
+              <select id="filterStatus" class="px-4 py-2 border rounded-lg focus:ring-blue-500 focus:border-blue-500">
+                <option value="">Semua Status</option>
+                <option value="Rawat Inap">Rawat Inap</option>
+                <option value="Rawat Jalan">Rawat Jalan</option>
+                <option value="IGD">IGD</option>
+              </select>
+            </div>
+
+            <!-- Table -->
             <div class="overflow-x-auto">
-              <table class="min-w-full">
-                <thead>
-                  <tr class="bg-gray-50">
-                    <th
-                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                    >
-                      User
-                    </th>
-                    <th
-                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                    >
-                      Role
-                    </th>
-                    <th
-                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                    >
-                      Status
-                    </th>
-                    <th
-                      class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
-                    >
-                      Joined
-                    </th>
-                    <th
-                      class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider"
-                    >
-                      Actions
-                    </th>
+              <table class="min-w-full divide-y divide-gray-200">
+                <thead class="bg-gray-50">
+                  <tr>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Informasi Pasien</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Data Medis</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Status & Kamar</th>
+                    <th class="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider">Riwayat</th>
+                    <th class="px-6 py-3 text-right text-xs font-medium text-gray-500 uppercase tracking-wider">Aksi</th>
                   </tr>
                 </thead>
-                <tbody class="bg-white divide-y divide-gray-200">
-                  <tr class="hover:bg-gray-50">
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="flex items-center">
-                        <img
-                          class="h-8 w-8 rounded-full"
-                          src="../frontend/pages/images/profile_admin.png"
-                          alt=""
-                        />
-                        <div class="ml-4">
-                          <div class="text-sm font-medium text-gray-900">
-                            Robbanie Hillaly Kurniadien
-                          </div>
-                          <div class="text-sm text-gray-500">
-                            @IllalRajinNgoding
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <span
-                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-blue-100 text-blue-800"
-                      >
-                        Admin
-                      </span>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <span
-                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
-                      >
-                        Active
-                      </span>
-                    </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                    >
-                      Jan 22, 2021
-                    </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-                    >
-                      <button class="text-blue-600 hover:text-blue-900 mr-3">
-                        Edit
-                      </button>
-                      <button class="text-red-600 hover:text-red-900">
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                  <tr class="hover:bg-gray-50">
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="flex items-center">
-                        <img
-                          class="h-8 w-8 rounded-full"
-                          src="../frontend/pages/images/profile_user.png"
-                          alt=""
-                        />
-                        <div class="ml-4">
-                          <div class="text-sm font-medium text-gray-900">
-                            Ferdiansyah
-                          </div>
-                          <div class="text-sm text-gray-500">@FdrAnsyah</div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <span
-                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-gray-100 text-gray-800"
-                      >
-                        OB
-                      </span>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <span
-                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-green-100 text-green-800"
-                      >
-                        Active
-                      </span>
-                    </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                    >
-                      August 11, 2022
-                    </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-                    >
-                      <button class="text-blue-600 hover:text-blue-900 mr-3">
-                        Edit
-                      </button>
-                      <button class="text-red-600 hover:text-red-900">
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                  <tr class="hover:bg-gray-50">
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="flex items-center">
-                        <img
-                          class="h-8 w-8 rounded-full"
-                          src="../frontend/pages/images/profile_medis1.png"
-                          alt=""
-                        />
-                        <div class="ml-4">
-                          <div class="text-sm font-medium text-gray-900">
-                            Dzikra Aulia Syfa
-                          </div>
-                          <div class="text-sm text-gray-500">
-                            robert@example.com
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <span
-                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800"
-                      >
-                        Medis
-                      </span>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <span
-                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800"
-                      >
-                        Active
-                      </span>
-                    </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                    >
-                      Jan 11, 2022
-                    </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-                    >
-                      <button class="text-blue-600 hover:text-blue-900 mr-3">
-                        Edit
-                      </button>
-                      <button class="text-red-600 hover:text-red-900">
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
-                  <tr class="hover:bg-gray-50">
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <div class="flex items-center">
-                        <img
-                          class="h-8 w-8 rounded-full"
-                          src="../frontend/pages/images/profile_medis.jpg"
-                          alt=""
-                        />
-                        <div class="ml-4">
-                          <div class="text-sm font-medium text-gray-900">
-                            Dinta Fridayanti
-                          </div>
-                          <div class="text-sm text-gray-500">
-                            robert@example.com
-                          </div>
-                        </div>
-                      </div>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <span
-                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-purple-100 text-purple-800"
-                      >
-                        Medis
-                      </span>
-                    </td>
-                    <td class="px-6 py-4 whitespace-nowrap">
-                      <span
-                        class="px-2 inline-flex text-xs leading-5 font-semibold rounded-full bg-yellow-100 text-yellow-800"
-                      >
-                        Pending
-                      </span>
-                    </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-sm text-gray-500"
-                    >
-                      Feb 13, 2024
-                    </td>
-                    <td
-                      class="px-6 py-4 whitespace-nowrap text-right text-sm font-medium"
-                    >
-                      <button class="text-blue-600 hover:text-blue-900 mr-3">
-                        Edit
-                      </button>
-                      <button class="text-red-600 hover:text-red-900">
-                        Delete
-                      </button>
-                    </td>
-                  </tr>
+                <tbody id="tablebody" class="bg-white divide-y divide-gray-200">
+                  <!-- Data will be inserted here by JavaScript -->
                 </tbody>
               </table>
-              <div
-                class="px-5 py-5 bg-white border-t flex flex-col xs:flex-row items-center xs:justify-between"
-              >
-                <span class="text-xs xs:text-sm text-gray-900">
-                  Showing 1 to 4 of 50 Entries
-                </span>
-                <div class="inline-flex mt-2 xs:mt-0">
-                  <button
-                    class="text-sm bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-l"
-                  >
-                    Prev
-                  </button>
-                  <button
-                    class="text-sm bg-gray-100 hover:bg-gray-200 text-gray-800 font-semibold py-2 px-4 rounded-r"
-                  >
-                    Next
-                  </button>
+            </div>
+          </div>
+        </div>
+
+        <!-- Modal -->
+        <div id="tambahModal" class="hidden fixed inset-0 bg-gray-600 bg-opacity-50 overflow-y-auto h-full w-full fade-in-out">
+          <div class="relative top-20 mx-auto p-5 border max-w-2xl shadow-lg rounded-md bg-white fade-in">
+            <div class="mt-3">
+              <h3 class="text-lg font-medium text-gray-900 mb-4">Data Pasien Baru</h3>
+              <form id="formData" class="space-y-4">
+                <!-- Informasi Pribadi -->
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <h4 class="text-md font-medium text-gray-700 mb-3">Informasi Pribadi</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700">Nama Lengkap</label>
+                      <input type="text" id="nama" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                    </div>
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700">NIK</label>
+                      <input type="text" id="nik" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                    </div>
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700">Tanggal Lahir</label>
+                      <input type="date" id="tanggalLahir" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                    </div>
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700">Jenis Kelamin</label>
+                      <select id="jenisKelamin" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <option value="">Pilih Jenis Kelamin</option>
+                        <option value="Laki-laki">Laki-laki</option>
+                        <option value="Perempuan">Perempuan</option>
+                      </select>
+                    </div>
+                  </div>
                 </div>
-              </div>
+
+                <!-- Informasi Kontak -->
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <h4 class="text-md font-medium text-gray-700 mb-3">Informasi Kontak</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700">Nomor Telepon</label>
+                      <input type="tel" id="telepon" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                    </div>
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700">Email</label>
+                      <input type="email" id="email" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                    </div>
+                    <div class="md:col-span-2">
+                      <label class="block text-sm font-medium text-gray-700">Alamat</label>
+                      <textarea id="alamat" required rows="2" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500"></textarea>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Data Medis -->
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <h4 class="text-md font-medium text-gray-700 mb-3">Data Medis</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700">Golongan Darah</label>
+                      <select id="goldarah" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <option value="">Pilih Golongan Darah</option>
+                        <option value="A">A</option>
+                        <option value="B">B</option>
+                        <option value="AB">AB</option>
+                        <option value="O">O</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700">Rhesus</label>
+                      <select id="rhesus" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <option value="">Pilih Rhesus</option>
+                        <option value="Positif">Positif</option>
+                        <option value="Negatif">Negatif</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700">Alergi</label>
+                      <input type="text" id="alergi" placeholder="Pisahkan dengan koma" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                    </div>
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700">Penyakit Bawaan</label>
+                      <input type="text" id="penyakitBawaan" placeholder="Pisahkan dengan koma" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Status Pasien -->
+                <div class="bg-gray-50 p-4 rounded-lg">
+                  <h4 class="text-md font-medium text-gray-700 mb-3">Status Pasien</h4>
+                  <div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700">Status Perawatan</label>
+                      <select id="statusPerawatan" required class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500">
+                        <option value="">Pilih Status</option>
+                        <option value="Rawat Inap">Rawat Inap</option>
+                        <option value="Rawat Jalan">Rawat Jalan</option>
+                        <option value="IGD">IGD</option>
+                      </select>
+                    </div>
+                    <div>
+                      <label class="block text-sm font-medium text-gray-700">BPJS/Asuransi</label>
+                      <input type="text" id="asuransi" class="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-blue-500 focus:ring-blue-500" />
+                    </div>
+                  </div>
+                </div>
+
+                <div class="flex justify-end space-x-3">
+                  <button type="button" onclick="closePasienModal()" class="px-4 py-2 bg-gray-200 text-gray-800 rounded-md hover:bg-gray-300 focus:outline-none focus:ring-2 focus:ring-gray-300">Batal</button>
+                  <button type="submit" class="px-4 py-2 bg-blue-500 text-white rounded-md hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500">Simpan</button>
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -1064,60 +571,55 @@
 
     <script>
       function toggleSidebar() {
-        const sidebar = document.getElementById("sidebar");
-        sidebar.classList.toggle("-translate-x-full");
+        const sidebar = document.getElementById('sidebar');
+        sidebar.classList.toggle('-translate-x-full');
       }
 
       function showDashboard() {
-        document.getElementById("dashboard-content").classList.remove("hidden");
-        document.getElementById("users-content").classList.add("hidden");
-        document.getElementById("pasien-content").classList.add("hidden");
-        highlightCurrentPage("dashboard");
+        document.getElementById('dashboard-content').classList.remove('hidden');
+        document.getElementById('users-content').classList.add('hidden');
+        document.getElementById('pasien-content').classList.add('hidden');
+        highlightCurrentPage('dashboard');
       }
 
       function showUsers() {
-        document.getElementById("dashboard-content").classList.add("hidden");
-        document.getElementById("users-content").classList.remove("hidden");
-        document.getElementById("pasien-content").classList.add("hidden");
-        highlightCurrentPage("users");
+        document.getElementById('dashboard-content').classList.add('hidden');
+        document.getElementById('users-content').classList.remove('hidden');
+        document.getElementById('pasien-content').classList.add('hidden');
+        highlightCurrentPage('users');
       }
 
       function showPasien() {
-        document.getElementById("pasien-content").classList.remove("hidden");
-        document.getElementById("dashboard-content").classList.add("hidden");
-        document.getElementById("users-content").classList.add("hidden");
-        highlightCurrentPage("pasien");
+        document.getElementById('pasien-content').classList.remove('hidden');
+        document.getElementById('dashboard-content').classList.add('hidden');
+        document.getElementById('users-content').classList.add('hidden');
+        highlightCurrentPage('pasien');
       }
 
       function highlightCurrentPage(page) {
         // Remove all active classes
-        document.querySelectorAll("nav a").forEach((link) => {
-          link.classList.remove("bg-blue-50", "text-blue-600");
+        document.querySelectorAll('nav a').forEach((link) => {
+          link.classList.remove('bg-blue-50', 'text-blue-600');
         });
 
         // Add active class to current page
-        const currentPageLink = Array.from(
-          document.querySelectorAll("nav a")
-        ).find((link) =>
-          link.textContent.toLowerCase().includes(page.toLowerCase())
-        );
+        const currentPageLink = Array.from(document.querySelectorAll('nav a')).find((link) => link.textContent.toLowerCase().includes(page.toLowerCase()));
         if (currentPageLink) {
-          currentPageLink.classList.add("bg-blue-50", "text-blue-600");
+          currentPageLink.classList.add('bg-blue-50', 'text-blue-600');
         }
       }
 
       // Initialize tooltips
-      document.querySelectorAll("[data-tooltip]").forEach((element) => {
-        element.addEventListener("mouseenter", (e) => {
-          const tooltip = document.createElement("div");
-          tooltip.className =
-            "absolute bg-gray-800 text-white text-xs rounded py-1 px-2 -mt-8";
+      document.querySelectorAll('[data-tooltip]').forEach((element) => {
+        element.addEventListener('mouseenter', (e) => {
+          const tooltip = document.createElement('div');
+          tooltip.className = 'absolute bg-gray-800 text-white text-xs rounded py-1 px-2 -mt-8';
           tooltip.textContent = e.target.dataset.tooltip;
           e.target.appendChild(tooltip);
         });
 
-        element.addEventListener("mouseleave", (e) => {
-          const tooltip = e.target.querySelector(".absolute");
+        element.addEventListener('mouseleave', (e) => {
+          const tooltip = e.target.querySelector('.absolute');
           if (tooltip) tooltip.remove();
         });
       });
@@ -1127,45 +629,29 @@
       const getElements = (selector) => document.querySelectorAll(selector);
 
       // State Management
-      let currentPage = "dashboard";
+      let currentPage = 'dashboard';
       let sidebarOpen = window.innerWidth >= 768; // Default open on desktop
 
       // Fungsi untuk toggle sidebar
       function toggleSidebar() {
-        const sidebar = getElement("sidebar");
-        const mainContent = document.querySelector(".md\\:ml-64");
+        const sidebar = getElement('sidebar');
+        const mainContent = document.querySelector('.md\\:ml-64');
 
-        sidebar.classList.toggle("-translate-x-full");
+        sidebar.classList.toggle('-translate-x-full');
         sidebarOpen = !sidebarOpen;
 
         // Animate main content
         if (window.innerWidth >= 768) {
-          mainContent.style.marginLeft = sidebarOpen ? "16rem" : "0";
-          mainContent.style.transition = "margin-left 300ms ease-in-out";
+          mainContent.style.marginLeft = sidebarOpen ? '16rem' : '0';
+          mainContent.style.transition = 'margin-left 300ms ease-in-out';
         }
       }
       // calender
-      let calendar = document.querySelector(".calendar");
-      const month_names = [
-        "January",
-        "February",
-        "March",
-        "April",
-        "May",
-        "June",
-        "July",
-        "August",
-        "September",
-        "October",
-        "November",
-        "December",
-      ];
+      let calendar = document.querySelector('.calendar');
+      const month_names = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
       const isLeapYear = (year) => {
-        return (
-          (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) ||
-          (year % 100 === 0 && year % 400 === 0)
-        );
+        return (year % 4 === 0 && year % 100 !== 0 && year % 400 !== 0) || (year % 100 === 0 && year % 400 === 0);
       };
 
       const getFebDays = (year) => {
@@ -1173,24 +659,11 @@
       };
 
       const generateCalendar = (month, year) => {
-        let calendar_days = calendar.querySelector(".calendar-days");
-        let calendar_header_year = calendar.querySelector("#year");
-        let days_of_month = [
-          31,
-          getFebDays(year),
-          31,
-          30,
-          31,
-          30,
-          31,
-          31,
-          30,
-          31,
-          30,
-          31,
-        ];
+        let calendar_days = calendar.querySelector('.calendar-days');
+        let calendar_header_year = calendar.querySelector('#year');
+        let days_of_month = [31, getFebDays(year), 31, 30, 31, 30, 31, 31, 30, 31, 30, 31];
 
-        calendar_days.innerHTML = "";
+        calendar_days.innerHTML = '';
 
         let currDate = new Date();
         if (!month) month = currDate.getMonth();
@@ -1202,62 +675,50 @@
 
         let first_day = new Date(year, month, 1);
 
-        for (
-          let i = 0;
-          i <= days_of_month[month] + first_day.getDay() - 1;
-          i++
-        ) {
-          let day = document.createElement("div");
+        for (let i = 0; i <= days_of_month[month] + first_day.getDay() - 1; i++) {
+          let day = document.createElement('div');
           if (i >= first_day.getDay()) {
             const dayNumber = i - first_day.getDay() + 1;
             day.classList.add(
-              "calendar-day-hover",
-              "h-10",
-              "flex",
-              "items-center",
-              "justify-center",
-              "rounded-full",
-              "cursor-pointer",
-              "text-gray-700",
-              "dark:text-gray-200",
-              "hover:bg-blue-100",
-              "dark:hover:bg-blue-900",
-              "transition-colors"
+              'calendar-day-hover',
+              'h-10',
+              'flex',
+              'items-center',
+              'justify-center',
+              'rounded-full',
+              'cursor-pointer',
+              'text-gray-700',
+              'dark:text-gray-200',
+              'hover:bg-blue-100',
+              'dark:hover:bg-blue-900',
+              'transition-colors'
             );
             day.innerHTML = dayNumber;
 
-            if (
-              dayNumber === currDate.getDate() &&
-              year === currDate.getFullYear() &&
-              month === currDate.getMonth()
-            ) {
-              day.classList.add(
-                "bg-blue-500",
-                "text-white",
-                "hover:bg-blue-600"
-              );
+            if (dayNumber === currDate.getDate() && year === currDate.getFullYear() && month === currDate.getMonth()) {
+              day.classList.add('bg-blue-500', 'text-white', 'hover:bg-blue-600');
             }
           }
           calendar_days.appendChild(day);
         }
       };
 
-      let month_list = calendar.querySelector(".month-list");
+      let month_list = calendar.querySelector('.month-list');
 
       month_names.forEach((e, index) => {
-        let month = document.createElement("div");
+        let month = document.createElement('div');
         month.innerHTML = `<div data-month="${index}" class="text-center py-2 rounded cursor-pointer text-gray-700 dark:text-gray-200 hover:bg-blue-100 dark:hover:bg-blue-900 transition-colors">${e}</div>`;
-        month.querySelector("div").onclick = () => {
-          month_list.classList.remove("show");
+        month.querySelector('div').onclick = () => {
+          month_list.classList.remove('show');
           curr_month.value = index;
           generateCalendar(index, curr_year.value);
         };
         month_list.appendChild(month);
       });
 
-      let month_picker = calendar.querySelector("#month-picker");
+      let month_picker = calendar.querySelector('#month-picker');
       month_picker.onclick = () => {
-        month_list.classList.toggle("hidden");
+        month_list.classList.toggle('hidden');
       };
 
       let currDate = new Date();
@@ -1266,29 +727,23 @@
 
       generateCalendar(curr_month.value, curr_year.value);
 
-      document.querySelector("#prev-year").onclick = () => {
+      document.querySelector('#prev-year').onclick = () => {
         --curr_year.value;
         generateCalendar(curr_month.value, curr_year.value);
       };
 
-      document.querySelector("#next-year").onclick = () => {
+      document.querySelector('#next-year').onclick = () => {
         ++curr_year.value;
         generateCalendar(curr_month.value, curr_year.value);
       };
 
-      // cek user loggedin function
-      if (localStorage.getItem(isLoggedIn)) {
-        window.location.href = "../fronted/pages/index.html";
-      }
-
       // logout function
       function logout() {
-        localStorage.removeItem("isLoggedIn");
-        window.location.href = "../frontend/pages/index.html";
+        localStorage.removeItem('isLoggedIn');
+        window.location.href = '../frontend/pages/index.html';
       }
 
       // add user new
-      
     </script>
     <script src="../frontend/src/user.js"></script>
   </body>
