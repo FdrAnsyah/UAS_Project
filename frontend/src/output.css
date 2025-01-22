@@ -1324,6 +1324,10 @@ video {
   --tw-gradient-to: transparent var(--tw-gradient-to-position);
 }
 
+.bg-\[200\%_200\%\] {
+  background-position: 200% 200%;
+}
+
 .fill-current {
   fill: currentColor;
 }
