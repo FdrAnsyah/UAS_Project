@@ -42,7 +42,7 @@ if (!localStorage.getItem('employees')) {
       const tr = document.createElement('tr');
       tr.className = 'hover:bg-gray-50';
       tr.innerHTML = `
-        <td class="px-6 py-4 whitespace-nowrap">
+        <td class="px-6 py-4 whitespace-nowrap fade-in">
           <div class="text-sm font-medium text-gray-900">${emp.name}</div>
           <div class="text-sm text-gray-500">${emp.email}</div>
         </td>
@@ -192,7 +192,7 @@ const displayPasien = () => {
     };
 
     tr.innerHTML = `
-      <td class="px-6 py-4 whitespace-nowrap">
+      <td class="px-6 py-4 whitespace-nowrap fade-in">
         <div class="text-sm font-medium text-gray-900">${pasien.nama}</div>
         <div class="text-sm text-gray-500">NIK: ${pasien.nik}</div>
         <div class="text-xs text-gray-500">
