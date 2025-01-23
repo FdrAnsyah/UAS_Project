@@ -6,6 +6,7 @@
     <title>Puskesmas Haza</title>
     <link rel="stylesheet" href="../src/output.css" />
     <script src="../src/main.js"></script>
+    <script src="../src/modal.js"></script>
     <script src="https://unpkg.com/scrollreveal"></script>
   </head>
   <body class="bg-gradient-to-b from-white to-lime-50">
@@ -41,12 +42,12 @@
                   </svg>
                 </button>
                 <div class="hidden dropdown-menu md:absolute left-0 top-full mt-2 w-72 bg-white rounded-lg shadow-lg py-2">
-                  <a href="#" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Klaster Manajemen</a>
+                  <a href="#services" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Layanan Puskesmas Haza</a>
                   <a href="#" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Klaster Pelayanan Kesehatan Ibu dan Anak</a>
                   <a href="#" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Klaster Pelayanan Kesehatan Usia Dewasa dan Lanjut</a>
                   <a href="#" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Klaster Penanggulangan Penyakit Menular</a>
                   <a href="#" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Lintas Klaster</a>
-                  <a href="#" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Layanan Khusus</a>
+                  <a href="#" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Klaster Manajemen</a>
                 </div>
               </li>
 
@@ -136,7 +137,7 @@
                 </div>
                 <!-- Decorative Elements -->
                 <div class="absolute -top-4 -right-4 w-60 h-60 bg-lime-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob"></div>
-                <div class="absolute -bottom-6 -left-4 w-60 h-60 bg-blue-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
+                <div class="absolute -bottom-6 -left-4 w-60 h-60 bg-lime-200 rounded-full mix-blend-multiply filter blur-xl opacity-70 animate-blob animation-delay-2000"></div>
               </div>
             </div>
           </div>
@@ -186,7 +187,7 @@
     <!-- Bagian Hero End -->
 
     <!-- Bagian Visi dan Misi -->
-    <div id="vision-mission" class="w-full py-20 bg-gray-50">
+    <div id="vision-mission" class="w-full py-20">
       <div class="container mx-auto max-w-screen-xl px-4">
         <div class="w-full md:w-[90%] mx-auto items-center">
           <div class="flex flex-col md:flex-row gap-12">
@@ -218,6 +219,48 @@
       </div>
     </div>
     <!-- Bagian Visi dan Misi End -->
+
+    <!-- Bagian Layanan -->
+    <div id="services" class="w-full py-20">
+      <div class="container mx-auto max-w-screen-xl px-4">
+        <div class="w-full md:w-[90%] mx-auto items-center">
+          <div class="text-center mb-12">
+            <h1 class="text-3xl font-bold text-slate-800 uppercase">Layanan <span class="text-lime-500">Kami</span></h1>
+          </div>
+          <div class="grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+            <!-- Poli Umum -->
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+              <img src="./images/layanan/umum.jpg" alt="Poli Umum" class="w-full h-48 object-cover" />
+              <div class="p-6 flex flex-col items-center">
+                <h2 class="text-xl font-semibold text-slate-800 text-center">Poli Umum</h2>
+                <p class="text-slate-500 text-sm mt-2 leading-relaxed text-center">Pelayanan kesehatan umum seperti konsultasi dokter dan pengobatan dasar.</p>
+                <button class="mt-4 px-6 py-2 bg-lime-500 text-white rounded hover:bg-lime-600 transition-colors w-full sm:w-auto text-center">Lihat Layanan</button>
+              </div>
+            </div>
+            <!-- Poli Gigi -->
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+              <img src="./images/layanan/gigi.jpg" alt="Poli Gigi" class="w-full h-48 object-cover" />
+              <div class="p-6 flex flex-col items-center">
+                <h2 class="text-xl font-semibold text-slate-800 text-center">Poli Gigi</h2>
+                <p class="text-slate-500 text-sm mt-2 leading-relaxed text-center">Layanan kesehatan gigi seperti pembersihan karang gigi, tambal gigi, dan lainnya.</p>
+                <button class="mt-4 px-6 py-2 bg-lime-500 text-white rounded hover:bg-lime-600 transition-colors w-full sm:w-auto text-center">Lihat Layanan</button>
+              </div>
+            </div>
+            <!-- Poli Ibu dan Anak -->
+            <div class="bg-white shadow-lg rounded-xl overflow-hidden">
+              <img src="./images/layanan/ibu&anak.jpg" alt="Poli Ibu dan Anak" class="w-full h-48 object-cover" />
+              <div class="p-6 flex flex-col items-center">
+                <h2 class="text-xl font-semibold text-slate-800 text-center">Poli Ibu & Anak</h2>
+                <p class="text-slate-500 text-sm mt-2 leading-relaxed text-center">Layanan untuk ibu hamil, anak-anak, dan kesehatan reproduksi.</p>
+                <button class="mt-4 px-6 py-2 bg-lime-500 text-white rounded hover:bg-lime-600 transition-colors w-full sm:w-auto text-center">Lihat Layanan</button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Bagian Layanan End -->
 
     <!-- Bagian Content -->
     <div id="content" class="w-full py-20">
@@ -722,7 +765,7 @@
               ></path>
             </svg>
           </a>
-          <a href="/#" class="w-6 mx-1">
+          <a href="#" class="w-6 mx-1">
             <svg
               class="fill-current cursor-pointer text-gray-500 hover:text-lime-500"
               width="100%"
@@ -745,7 +788,7 @@
               ></path>
             </svg>
           </a>
-          <a href="/#" class="w-6 mx-1">
+          <a href="#" class="w-6 mx-1">
             <svg
               class="fill-current cursor-pointer text-gray-500 hover:text-lime-500"
               width="100%"
@@ -781,7 +824,7 @@
               </g>
             </svg>
           </a>
-          <a href="/#" class="w-6 mx-1">
+          <a href="#" class="w-6 mx-1">
             <svg
               class="fill-current cursor-pointer text-gray-500 hover:text-lime-500"
               width="100%"
@@ -813,7 +856,7 @@
               ></path>
             </svg>
           </a>
-          <a href="/#" class="w-6 mx-1">
+          <a href="#" class="w-6 mx-1">
             <svg
               class="fill-current cursor-pointer text-gray-500 hover:text-lime-500"
               width="100%"
@@ -856,10 +899,6 @@
       ScrollReveal().reveal('#footer', {
         delay: 250,
         origin: 'left',
-      });
-      ScrollReveal().reveal('#footer2', {
-        delay: 250,
-        origin: 'right',
       });
     </script>
   </body>

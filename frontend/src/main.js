@@ -76,13 +76,29 @@ document.addEventListener('DOMContentLoaded', function () {
       // Reset transitioning state after animation
       setTimeout(() => {
         isTransitioning = false;
-      }, 1000);
+      }, 300); // Adjusted to 300ms
+    });
+
+    // Hover for desktop
+    dropdown.addEventListener('mouseenter', function () {
+      if (window.innerWidth >= 768) {
+        clearTimeout(menu.hideTimeout);
+        menu.classList.remove('hidden');
+      }
+    });
+
+    dropdown.addEventListener('mouseleave', function () {
+      if (window.innerWidth >= 768) {
+        menu.hideTimeout = setTimeout(() => {
+          menu.classList.add('hidden');
+        }, 200);
+      }
     });
   });
 
   // Close dropdowns when clicking outside
   document.addEventListener('click', function (e) {
-    if (activeDropdown && !activeDropdown.contains(e.target)) {
+    if (activeDropdown && !activeDropdown.contains(e.target) && !activeDropdown.parentElement.contains(e.target)) {
       const activeToggle = activeDropdown.parentElement.querySelector('.dropdown-toggle');
       const activeArrow = activeToggle.querySelector('svg');
 
@@ -107,10 +123,7 @@ document.addEventListener('DOMContentLoaded', function () {
     clearTimeout(resizeTimer);
     resizeTimer = setTimeout(function () {
       if (window.innerWidth >= 768) {
-        // Desktop view
         navbarMenu.classList.remove('hidden');
-
-        // Close all dropdowns
         dropdownElements.forEach((dropdown) => {
           const toggle = dropdown.querySelector('.dropdown-toggle');
           const menu = dropdown.querySelector('.dropdown-menu');
@@ -120,34 +133,11 @@ document.addEventListener('DOMContentLoaded', function () {
           arrow.classList.remove('rotate-180');
           menu.classList.add('hidden');
         });
-
         activeDropdown = null;
         toggleBurgerAnimation(false);
       } else {
-        // Mobile view
         navbarMenu.classList.add('hidden');
       }
     }, 250);
   });
-
-  // Handle dropdown hover on desktop
-  if (window.innerWidth >= 768) {
-    dropdownElements.forEach((dropdown) => {
-      const toggle = dropdown.querySelector('.dropdown-toggle');
-      const menu = dropdown.querySelector('.dropdown-menu');
-
-      // Hover events for desktop only
-      dropdown.addEventListener('mouseenter', function () {
-        if (window.innerWidth >= 768) {
-          menu.classList.remove('hidden');
-        }
-      });
-
-      dropdown.addEventListener('mouseleave', function () {
-        if (window.innerWidth >= 768) {
-          menu.classList.add('hidden');
-        }
-      });
-    });
-  }
 });
