@@ -1,10 +1,13 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="scroll-smooth">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Puskesmas Haza</title>
     <link rel="stylesheet" href="../src/output.css" />
+    <script src="../src/main.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
   </head>
   <body class="bg-gradient-to-b from-white to-lime-50">
     <!-- Navbar -->
@@ -78,12 +81,12 @@
                   </svg>
                 </button>
                 <div class="hidden dropdown-menu md:absolute right-0 top-full mt-2 w-48 bg-white rounded-lg shadow-lg py-2">
-                  <a href="#" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Profil Puskesmas</a>
-                  <a href="#" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Visi dan Misi</a>
-                  <a href="#" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Fasilitas Kami</a>
-                  <a href="#" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Kinerja Puskesmas</a>
-                  <a href="#" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Kontak Kami</a>
-                  <a href="#" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">CSR</a>
+                  <a href="#hero" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Profil Puskesmas</a>
+                  <a href="#vision-mission" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Visi dan Misi</a>
+                  <a href="#content" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Fasilitas Kami</a>
+                  <a href="#testimoni" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Kinerja Puskesmas</a>
+                  <a href="#footer" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">Kontak Kami</a>
+                  <a href="#footer2" class="block px-4 py-2 text-sm hover:bg-lime-50 hover:text-lime-500">CSR</a>
                 </div>
               </li>
 
@@ -183,22 +186,56 @@
     </div>
     <!-- Bagian Hero End -->
 
+    <!-- Bagian Visi dan Misi -->
+    <div id="vision-mission" class="w-full py-20 bg-gray-50">
+      <div class="container mx-auto max-w-screen-xl px-4">
+        <div class="w-full md:w-[90%] mx-auto items-center">
+          <div class="flex flex-col md:flex-row gap-12">
+            <!-- Bagian Visi -->
+            <div class="w-full md:w-1/2">
+              <div class="mb-6">
+                <h2 class="text-4xl font-bold text-slate-800 uppercase">Visi <span class="text-lime-500">Kami</span></h2>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-lg">
+                <p class="text-slate-500 leading-relaxed">Menjadi pusat pelayanan kesehatan terpercaya yang memberikan layanan berkualitas dan humanis untuk mendukung masyarakat hidup sehat.</p>
+              </div>
+            </div>
+            <!-- Bagian Misi -->
+            <div class="w-full md:w-1/2">
+              <div class="mb-6">
+                <h2 class="text-4xl font-bold text-slate-800 uppercase">Misi <span class="text-lime-500">Kami</span></h2>
+              </div>
+              <div class="bg-white p-6 rounded-xl shadow-lg">
+                <ul class="list-disc pl-6 text-slate-500 leading-relaxed space-y-3">
+                  <li>Menyediakan pelayanan kesehatan yang profesional, efektif, dan efisien.</li>
+                  <li>Meningkatkan kualitas hidup masyarakat melalui program edukasi dan pencegahan.</li>
+                  <li>Mendukung kesehatan masyarakat dengan fasilitas yang lengkap dan modern.</li>
+                  <li>Membangun kepercayaan melalui pelayanan yang ramah dan penuh empati.</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- Bagian Visi dan Misi End -->
+
     <!-- Bagian Content -->
     <div id="content" class="w-full py-20">
       <div class="container mx-auto max-w-screen-xl px-2 md:px-0">
         <div class="max-w-xl mb-16 text-center mx-auto px-4">
-          <h1 class="font-bold text-slate-800 text-2xl md:text-4xl capitalize mb-6">Kenapa Harus <span class="text-blue-600"> Puskesmas Negeri </span>Haza?</h1>
-          <p class="font-bold text-slate-500 capitalize">Alasan kenapa harus memilih untuk bergabung dengan Puskesmas Negeri Haza.</p>
+          <h1 class="font-bold text-slate-800 text-2xl md:text-4xl capitalize mb-6">Kenapa Harus <span class="text-lime-500"> Puskesmas </span>Haza?</h1>
+          <p class="font-bold text-slate-500 capitalize">Alasan Memilih Puskesmas Haza untuk Kesehatan Anda</p>
         </div>
         <!-- Content -->
         <div class="w-full md:flex space-x-2 space-y-3 md:space-y-0">
           <!-- card -->
           <div class="md:w-1/4 bg-white p-4 rounded-md shadow-md flex flex-col justify-center items-center text-center">
             <div class="mb-4">
-              <img src="./images/fasilitas2.jpg" alt="" class="w-full hover:scale-110 transition-all duration-500" />
+              <img src="./images/fasilitas1.jpg" alt="" class="w-full hover:scale-110 transition-all duration-500" />
             </div>
             <div class="space-y-3">
-              <a href="" class="font-semibold text-xl text-slate-800 hover:text-blue-600">Fasilitas Lengkap</a>
+              <a href="" class="font-semibold text-xl text-slate-800 hover:text-lime-500">Fasilitas Lengkap</a>
               <p class="text-slate-500">Puskesmas kami dilengkapi dengan sarana dan prasarana terbaik untuk memastikan pelayanan kesehatan yang optimal bagi masyarakat.</p>
             </div>
           </div>
@@ -206,10 +243,10 @@
           <!-- card -->
           <div class="md:w-1/4 bg-white p-4 rounded-md shadow-md flex flex-col justify-center items-center text-center">
             <div class="mb-4">
-              <img src="./images/fasilitas1.jpg" alt="" class="w-full hover:scale-110 transition-all duration-500" />
+              <img src="./images/fasilitas2.jpg" alt="" class="w-full hover:scale-110 transition-all duration-500" />
             </div>
             <div class="space-y-3">
-              <a href="" class="font-semibold text-xl text-slate-800 hover:text-blue-600">Kerja Sama Luas</a>
+              <a href="" class="font-semibold text-xl text-slate-800 hover:text-lime-500">Kerja Sama Luas</a>
               <p class="text-slate-500">Kami menjalin kolaborasi dengan berbagai pihak untuk menyediakan layanan kesehatan yang berkesinambungan dan terpercaya.</p>
             </div>
           </div>
@@ -217,21 +254,21 @@
           <!-- card -->
           <div class="md:w-1/4 bg-white p-4 rounded-md shadow-md flex flex-col justify-center items-center text-center">
             <div class="mb-4">
-              <img src="https://lh6.googleusercontent.com/proxy/yqTTPjAm3F_h7hs6rKZ3W0y955scGrs-hoYXDLOiSkOV3_ir325Wc8fFwNLWsdKxijoMW57AKpY9TROhwwGrvGmo9MOm3Q=s0-d" alt="" class="w-20 hover:scale-110 transition-all duration-500" />
+              <img src="./images/fasilitas3.jpg" alt="" class="w-full hover:scale-110 transition-all duration-500" />
             </div>
             <div class="space-y-3">
-              <a href="" class="font-semibold text-xl text-slate-800 hover:text-blue-600">Lingkungan Nyaman</a>
-              <p class="text-slate-500">Berada di lingkungan yang nyaman, aman dan dilengkapi dengan taman bunga yang indah.</p>
+              <a href="" class="font-semibold text-xl text-slate-800 hover:text-lime-500">Lingkungan Nyaman</a>
+              <p class="text-slate-500">Berada di lingkungan yang nyaman, aman dan dilengkapi dengan taman bunga yang indah, serta taman bermain anak.</p>
             </div>
           </div>
           <!-- card end -->
           <!-- card -->
           <div class="md:w-1/4 bg-white p-4 rounded-md shadow-md flex flex-col justify-center items-center text-center">
             <div class="mb-4">
-              <img src="./images/fasilitas3.jpg" alt="" class="w-20 hover:scale-110 transition-all duration-500" />
+              <img src="./images/fasilitas4.jpg" alt="" class="w-full hover:scale-110 transition-all duration-500" />
             </div>
             <div class="space-y-3">
-              <a href="" class="font-semibold text-xl text-slate-800 hover:text-blue-600">Tenaga Medis Kompeten</a>
+              <a href="" class="font-semibold text-xl text-slate-800 hover:text-lime-500">Tenaga Medis Kompeten</a>
               <p class="text-slate-500">Tenaga kesehatan profesional kami siap memberikan pelayanan terbaik dengan keahlian dan pengalaman yang terpercaya.</p>
             </div>
           </div>
@@ -243,110 +280,109 @@
     <!-- Bagian Content end -->
 
     <!-- Bagian Berita -->
-    <!-- Bagian Berita -->
     <div id="berita" class="w-full py-20">
       <div class="container mx-auto max-w-screen-xl px-2">
         <!-- Header -->
         <div class="mx-auto max-w-xl px-4 text-center mb-16 spayce-y-4">
-          <h1 class="font-bold text-slate-800 text-2xl mdtext-4xl capitalize">Berita Terbaru di <span class="text-blue-600"> SMK Negeri </span> Haza</h1>
-          <p class="text-slate-500 capitalize">Pilihan Ekstrakulikuler di SMK Negeri Haza.</p>
+          <h1 class="font-bold text-slate-800 text-2xl mdtext-4xl capitalize">Berita Terbaru di <span class="text-lime-500">Puskesmas </span> Haza</h1>
+          <p class="text-slate-500 capitalize">Pelayanan prima untuk kesehatan Anda! Cek Berita, info imunisasi, dan program terbaru di Puskesmas kami.</p>
         </div>
         <!-- Header end -->
         <!-- Content -->
         <div class="px-2 md:grid md:grid-cols-12 gap-3">
           <!-- Card -->
-          <div class="col-span-3 mb-6 rounded-md overflow-hidden">
-            <div class="mb-4 w-full h-[180px] overflow-hidden">
-              <img src="../images/berita/berita1.jpg" alt="" class="w-full h-full object-cover hover:scale-110 transition-all duration-500" />
+          <div class="bg-white col-span-3 mb-6 rounded-md overflow-hidden shadow-md">
+            <div class="mb-4 w-full aspect-video overflow-hidden">
+              <img src="./images/berita/cancer.jpg" alt="Hari Cancer" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 ease-in-out" />
             </div>
-            <p class="text-slate-500 font-semibold text-sm mb-2">13 Desember 2022</p>
-            <a href="" class="line-clamp-2 font-bold text-slate-800 text-xl mb-2 hover:text-blue-600">Siswa Membuat simulasi penerbangan pada Roket</a>
-            <p class="text-slate-500 font-normal text-sm mb-4">By Admin SmkNs</p>
-            <a href="" class="font-semibold text-blue-600">Baca Selengkapnya</a>
+            <p class="text-slate-500 font-semibold text-sm mb-2">4 Februari 2025</p>
+            <a href="" class="line-clamp-2 font-bold text-slate-800 text-xl mb-2 hover:text-lime-500"> Memperingati hari cancer, Kalian semua kuat </a>
+            <p class="text-slate-500 font-normal text-sm mb-4">By Admin Haza</p>
+            <a href="" class="font-semibold text-lime-500 hover:underline">Baca Selengkapnya</a>
           </div>
           <!-- Card end -->
           <!-- Card -->
-          <div class="col-span-3 mb-6 rounded-md overflow-hidden">
-            <div class="mb-4 w-full h-[180px] overflow-hidden">
-              <img src="../images/fasilitas3.jpg" alt="" class="w-full h-full object-cover hover:scale-110 transition-all duration-500" />
+          <div class="bg-white col-span-3 mb-6 rounded-md overflow-hidden shadow-md">
+            <div class="mb-4 w-full aspect-video overflow-hidden">
+              <img src="./images/berita/dokter.jpg" alt="Hari Cancer" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 ease-in-out" />
             </div>
-            <p class="text-slate-500 font-semibold text-sm mb-2">13 Desember 2022</p>
-            <a href="" class="line-clamp-2 font-bold text-slate-800 text-xl mb-2 hover:text-blue-600">Pendaftaran SMK Negeri Haza Telah Dibuka!</a>
-            <p class="text-slate-500 font-normal text-sm mb-4">By Admin SmkNs</p>
-            <a href="" class="font-semibold text-blue-600">Baca Selengkapnya</a>
+            <p class="text-slate-500 font-semibold text-sm mb-2">17 Desember 2024</p>
+            <a href="" class="line-clamp-2 font-bold text-slate-800 text-xl mb-2 hover:text-lime-500">Kedatangan dokter dari Singapore General Hospital</a>
+            <p class="text-slate-500 font-normal text-sm mb-4">By Admin Haza</p>
+            <a href="" class="font-semibold text-lime-500 hover:underline">Baca Selengkapnya</a>
           </div>
           <!-- Card end -->
           <!-- Card -->
-          <div class="col-span-3 mb-6 rounded-md overflow-hidden">
-            <div class="mb-4 w-full h-[180px] overflow-hidden">
-              <img src="../images/berita/berita.jpg" alt="" class="w-full h-full object-cover hover:scale-110 transition-all duration-500" />
+          <div class="bg-white col-span-3 mb-6 rounded-md overflow-hidden shadow-md">
+            <div class="mb-4 w-full aspect-video overflow-hidden">
+              <img src="./images/berita/gigi.jpg" alt="Hari Cancer" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 ease-in-out" />
             </div>
-            <p class="text-slate-500 font-semibold text-sm mb-2">13 Desember 2022</p>
-            <a href="" class="line-clamp-2 font-bold text-slate-800 text-xl mb-2 hover:text-blue-600">Alumni SMK Negeri Haza Bekerja di AWS</a>
-            <p class="text-slate-500 font-normal text-sm mb-4">By Admin SmkNs</p>
-            <a href="" class="font-semibold text-blue-600">Baca Selengkapnya</a>
+            <p class="text-slate-500 font-semibold text-sm mb-2">12 September 2024</p>
+            <a href="" class="line-clamp-2 font-bold text-slate-800 text-xl mb-2 hover:text-lime-500">Memperingati Hari Kesehatan Gigi dan Mulut Nasional</a>
+            <p class="text-slate-500 font-normal text-sm mb-4">By Admin Haza</p>
+            <a href="" class="font-semibold text-lime-500 hover:underline">Baca Selengkapnya</a>
           </div>
           <!-- Card end -->
           <!-- Card -->
-          <div class="col-span-3 mb-6 rounded-md overflow-hidden">
-            <div class="mb-4 w-full h-[180px] overflow-hidden">
-              <img src="../images/berita/berita3.jpg" alt="" class="w-full h-full object-cover hover:scale-110 transition-all duration-500" />
+          <div class="bg-white col-span-3 mb-6 rounded-md overflow-hidden shadow-md">
+            <div class="mb-4 w-full aspect-video overflow-hidden">
+              <img src="./images/berita/mata.jpg" alt="Hari Cancer" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 ease-in-out" />
             </div>
-            <p class="text-slate-500 font-semibold text-sm mb-2">13 Desember 2022</p>
-            <a href="" class="line-clamp-2 font-bold text-slate-800 text-xl mb-2 hover:text-blue-600">Siswa Ujian Praktikum</a>
-            <p class="text-slate-500 font-normal text-sm mb-4">By Admin SmkNs</p>
-            <a href="" class="font-semibold text-blue-600">Baca Selengkapnya</a>
+            <p class="text-slate-500 font-semibold text-sm mb-2">24 Agustus 2024</p>
+            <a href="" class="line-clamp-2 font-bold text-slate-800 text-xl mb-2 hover:text-lime-500">Gratis periksa mata, di Puskesmas Haza</a>
+            <p class="text-slate-500 font-normal text-sm mb-4">By Admin Haza</p>
+            <a href="" class="font-semibold text-lime-500 hover:underline">Baca Selengkapnya</a>
           </div>
           <!-- Card end -->
           <!-- Card -->
-          <div class="col-span-3 mb-6 rounded-md overflow-hidden">
-            <div class="mb-4 w-full h-[180px] overflow-hidden">
-              <img src="../images/berita/berita4.jpg" alt="" class="w-full h-full object-cover hover:scale-110 transition-all duration-500" />
+          <div class="bg-white col-span-3 mb-6 rounded-md overflow-hidden shadow-md">
+            <div class="mb-4 w-full aspect-video overflow-hidden">
+              <img src="./images/berita/obat.jpg" alt="Hari Cancer" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 ease-in-out" />
             </div>
-            <p class="text-slate-500 font-semibold text-sm mb-2">13 Desember 2022</p>
-            <a href="" class="line-clamp-2 font-bold text-slate-800 text-xl mb-2 hover:text-blue-600">Siswa Teknik Pengelasan yang berhasil bekerja di perusahaan ternama</a>
-            <p class="text-slate-500 font-normal text-sm mb-4">By Admin SmkNs</p>
-            <a href="" class="font-semibold text-blue-600">Baca Selengkapnya</a>
+            <p class="text-slate-500 font-semibold text-sm mb-2">15 Mei 2024</p>
+            <a href="" class="line-clamp-2 font-bold text-slate-800 text-xl mb-2 hover:text-lime-500">Pembagian Vitamin Gratis di Puskesmas Haza</a>
+            <p class="text-slate-500 font-normal text-sm mb-4">By Admin Haza</p>
+            <a href="" class="font-semibold text-lime-500 hover:underline">Baca Selengkapnya</a>
           </div>
           <!-- Card end -->
           <!-- Card -->
-          <div class="col-span-3 mb-6 rounded-md overflow-hidden">
-            <div class="mb-4 w-full h-[180px] overflow-hidden">
-              <img src="../images/berita/berita5.jpg" alt="" class="w-full h-full object-cover hover:scale-110 transition-all duration-500" />
+          <div class="bg-white col-span-3 mb-6 rounded-md overflow-hidden shadow-md">
+            <div class="mb-4 w-full aspect-video overflow-hidden">
+              <img src="./images/berita/operasi.jpg" alt="Hari Cancer" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 ease-in-out" />
             </div>
-            <p class="text-slate-500 font-semibold text-sm mb-2">13 Desember 2022</p>
-            <a href="" class="line-clamp-2 font-bold text-slate-800 text-xl mb-2 hover:text-blue-600">Siswa SMK Negeri Haza Menjuarai Lomba Memanah</a>
-            <p class="text-slate-500 font-normal text-sm mb-4">By Admin SmkNs</p>
-            <a href="" class="font-semibold text-blue-600">Baca Selengkapnya</a>
+            <p class="text-slate-500 font-semibold text-sm mb-2">13 Desember 2023</p>
+            <a href="" class="line-clamp-2 font-bold text-slate-800 text-xl mb-2 hover:text-lime-500">Operasi Amandel yang dilakukan oleh Dokter di Toronto General Hospital</a>
+            <p class="text-slate-500 font-normal text-sm mb-4">By Admin Haza</p>
+            <a href="" class="font-semibold text-lime-500 hover:underline">Baca Selengkapnya</a>
           </div>
           <!-- Card end -->
           <!-- Card -->
-          <div class="col-span-3 mb-6 rounded-md overflow-hidden">
-            <div class="mb-4 w-full h-[180px] overflow-hidden">
-              <img src="../images/berita/Rectangle 53.png" alt="" class="w-full h-full object-cover hover:scale-110 transition-all duration-500" />
+          <div class="bg-white col-span-3 mb-6 rounded-md overflow-hidden shadow-md">
+            <div class="mb-4 w-full aspect-video overflow-hidden">
+              <img src="./images/berita/suntik.jpg" alt="Hari Cancer" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 ease-in-out" />
             </div>
-            <p class="text-slate-500 font-semibold text-sm mb-2">13 Desember 2022</p>
-            <a href="" class="line-clamp-2 font-bold text-slate-800 text-xl mb-2 hover:text-blue-600">Pemilihan Ketua OSIS SMK Negeri Haza</a>
-            <p class="text-slate-500 font-normal text-sm mb-4">By Admin SmkNs</p>
-            <a href="" class="font-semibold text-blue-600">Baca Selengkapnya</a>
+            <p class="text-slate-500 font-semibold text-sm mb-2">5 Juni 2022</p>
+            <a href="" class="line-clamp-2 font-bold text-slate-800 text-xl mb-2 hover:text-lime-500">Imunisasi PCV untuk anak dibawah umur 12 tahun</a>
+            <p class="text-slate-500 font-normal text-sm mb-4">By Admin Haza</p>
+            <a href="" class="font-semibold text-lime-500 hover:underline">Baca Selengkapnya</a>
           </div>
           <!-- Card end -->
           <!-- Card -->
-          <div class="col-span-3 mb-6 rounded-md overflow-hidden">
-            <div class="mb-4 w-full h-[180px] overflow-hidden">
-              <img src="../images/berita/Rectangle 55.png" alt="" class="w-full h-full object-cover hover:scale-110 transition-all duration-500" />
+          <div class="bg-white col-span-3 mb-6 rounded-md overflow-hidden shadow-md">
+            <div class="mb-4 w-full aspect-video overflow-hidden">
+              <img src="./images/berita/vaksin.jpg" alt="Hari Cancer" class="w-full h-full object-cover hover:scale-105 transition-transform duration-300 ease-in-out" />
             </div>
-            <p class="text-slate-500 font-semibold text-sm mb-2">13 Desember 2022</p>
-            <a href="" class="line-clamp-2 font-bold text-slate-800 text-xl mb-2 hover:text-blue-600">Kunjungan Industri di SMK Negeri Haza</a>
-            <p class="text-slate-500 font-normal text-sm mb-4">By Admin SmkNs</p>
-            <a href="" class="font-semibold text-blue-600">Baca Selengkapnya</a>
+            <p class="text-slate-500 font-semibold text-sm mb-2">22 Februari 2022</p>
+            <a href="" class="line-clamp-2 font-bold text-slate-800 text-xl mb-2 hover:text-lime-500">Tersedia Vaksin Sinovac di Puskesmas Haza</a>
+            <p class="text-slate-500 font-normal text-sm mb-4">By Admin Haza</p>
+            <a href="" class="font-semibold text-lime-500 hover:underline">Baca Selengkapnya</a>
           </div>
           <!-- Card end -->
         </div>
         <!-- Content end -->
         <!-- Button -->
-        <div class="bg-blue-50 rounded-md py-6 mt-6 flex justify-center">
-          <a href="" class="inline-block bg-blue-600 text-white py-3 px-6 border border-blue-600 font-bold text-center text-sm rounded-md hover:bg-transparent hover:text-blue-600 transition-all duration-500">Semua Berita</a>
+        <div class="rounded-md py-2 mt-2 flex justify-center">
+          <a href="" class="inline-block bg-lime-500 text-white py-3 px-6 border border-lime-600 font-bold text-center text-sm rounded-md hover:bg-transparent hover:text-lime-500 transition-all duration-500">Semua Berita</a>
         </div>
         <!-- Button end -->
       </div>
@@ -420,7 +456,7 @@
       keenSliderPrevious.addEventListener('click', () => keenSlider.prev());
       keenSliderNext.addEventListener('click', () => keenSlider.next());
     </script>
-    <section class="bg-white">
+    <section id="testimoni" class="bg-white">
       <div class="mx-auto max-w-screen-xl px-4 py-12 sm:px-6 lg:px-8 lg:py-16">
         <h2 class="text-center text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl">Read trusted reviews from our customers</h2>
 
@@ -429,7 +465,7 @@
             <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
               <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
                 <div class="flex items-center gap-4">
-                  <img alt="" src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" class="size-14 rounded-full object-cover" />
+                  <img alt="" src="./images/testimoni/nurhayati.jpg" class="size-14 rounded-full object-cover" />
 
                   <div>
                     <div class="flex justify-center gap-0.5 text-green-500">
@@ -460,12 +496,13 @@
                       </svg>
                     </div>
 
-                    <p class="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                    <p class="mt-0.5 text-lg font-medium text-gray-900">Siti Nurhayati</p>
                   </div>
                 </div>
 
                 <p class="mt-4 text-gray-700">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!
+                  Pelayanan di Puskesmas Haza sangat memuaskan! Stafnya ramah, dokter-dokternya profesional, dan semua prosesnya cepat. Saya merasa tenang karena keluarga saya mendapatkan perawatan terbaik di sini. Terima kasih, Puskesmas
+                  Haza!
                 </p>
               </blockquote>
             </div>
@@ -473,7 +510,7 @@
             <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
               <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
                 <div class="flex items-center gap-4">
-                  <img alt="" src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" class="size-14 rounded-full object-cover" />
+                  <img alt="" src="./images/testimoni/rizky.jpg" class="size-14 rounded-full object-cover" />
 
                   <div>
                     <div class="flex justify-center gap-0.5 text-green-500">
@@ -504,12 +541,13 @@
                       </svg>
                     </div>
 
-                    <p class="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                    <p class="mt-0.5 text-lg font-medium text-gray-900">Andi Wijaya</p>
                   </div>
                 </div>
 
                 <p class="mt-4 text-gray-700">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!
+                  Puskesmas Haza benar-benar menjadi mitra kesehatan terpercaya untuk keluarga saya. Fasilitasnya lengkap, suasananya nyaman, dan tim medisnya selalu memberikan solusi terbaik. Sangat direkomendasikan untuk siapa saja yang
+                  mencari pelayanan kesehatan yang prima.
                 </p>
               </blockquote>
             </div>
@@ -517,7 +555,7 @@
             <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
               <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
                 <div class="flex items-center gap-4">
-                  <img alt="" src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" class="size-14 rounded-full object-cover" />
+                  <img alt="" src="./images/testimoni/andi.jpg" class="size-14 rounded-full object-cover" />
 
                   <div>
                     <div class="flex justify-center gap-0.5 text-green-500">
@@ -548,12 +586,12 @@
                       </svg>
                     </div>
 
-                    <p class="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                    <p class="mt-0.5 text-lg font-medium text-gray-900">Rizky Pratama</p>
                   </div>
                 </div>
 
                 <p class="mt-4 text-gray-700">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!
+                  Sebagai pasien, saya merasa dihargai di Puskesmas Haza. Stafnya peduli, penanganannya cepat, dan prosedurnya mudah. Tempat ini bukan sekadar fasilitas kesehatan, tapi rumah kedua untuk menjaga kesehatan saya.
                 </p>
               </blockquote>
             </div>
@@ -561,7 +599,7 @@
             <div class="keen-slider__slide opacity-40 transition-opacity duration-500">
               <blockquote class="rounded-lg bg-gray-50 p-6 shadow-sm sm:p-8">
                 <div class="flex items-center gap-4">
-                  <img alt="" src="https://images.unsplash.com/photo-1595152772835-219674b2a8a6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1180&q=80" class="size-14 rounded-full object-cover" />
+                  <img alt="" src="./images/testimoni/kartika.jpg" class="size-14 rounded-full object-cover" />
 
                   <div>
                     <div class="flex justify-center gap-0.5 text-green-500">
@@ -592,12 +630,13 @@
                       </svg>
                     </div>
 
-                    <p class="mt-0.5 text-lg font-medium text-gray-900">Paul Starr</p>
+                    <p class="mt-0.5 text-lg font-medium text-gray-900">Dewi Kartika</p>
                   </div>
                 </div>
 
                 <p class="mt-4 text-gray-700">
-                  Lorem ipsum dolor sit, amet consectetur adipisicing elit. Culpa sit rerum incidunt, a consequuntur recusandae ab saepe illo est quia obcaecati neque quibusdam eius accusamus error officiis atque voluptates magnam!
+                  Saya sangat mengapresiasi komitmen Puskesmas Haza dalam memberikan pelayanan berkualitas. Tim medisnya sigap, sabar, dan selalu memberikan penjelasan dengan detail. Saya merasa sangat nyaman dan aman setiap kali
+                  berkunjung.
                 </p>
               </blockquote>
             </div>
@@ -628,35 +667,34 @@
     <!-- Bagian Testimoni End -->
 
     <!-- Bagian Footer -->
-    <div class="bg-gray-100">
+    <div id="footer" class="bg-gray-100">
       <div class="max-w-screen-lg px-4 sm:px-6 text-gray-800 sm:grid md:grid-cols-4 sm:grid-cols-2 mx-auto">
         <div class="p-5">
-          <h3 class="font-bold text-xl text-indigo-600">Company Name</h3>
+          <h3 class="font-bold text-xl text-lime-500">Puskesmas Haza</h3>
         </div>
         <div class="p-5">
-          <div class="text-sm uppercase text-indigo-600 font-bold">Resources</div>
-          <a class="my-3 block" href="/#">Documentation <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Tutorials <span class="text-teal-600 text-xs p-1"></span></a
-          ><a class="my-3 block" href="/#">Support <span class="text-teal-600 text-xs p-1">New</span></a>
+          <div class="text-sm uppercase text-lime-500 font-bold">Sumber</div>
+          <a class="my-3 block" href="#">Dokumentasi<span class="text-teal-600 text-xs p-1">New</span></a>
         </div>
         <div class="p-5">
-          <div class="text-sm uppercase text-indigo-600 font-bold">Support</div>
-          <a class="my-3 block" href="/#">Help Center <span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="/#">Privacy Policy <span class="text-teal-600 text-xs p-1"></span></a
-          ><a class="my-3 block" href="/#">Conditions <span class="text-teal-600 text-xs p-1"></span></a>
+          <div class="text-sm uppercase text-lime-500 font-bold">Dukungan</div>
+          <a class="my-3 block" href="https://wa.me/62895383115843">Pusat Bantuan<span class="text-teal-600 text-xs p-1"></span></a><a class="my-3 block" href="#">kebijakan privasi<span class="text-teal-600 text-xs p-1"></span></a
+          ><a class="my-3 block" href="#">Kondisi<span class="text-teal-600 text-xs p-1"></span></a>
         </div>
         <div class="p-5">
-          <div class="text-sm uppercase text-indigo-600 font-bold">Contact us</div>
-          <a class="my-3 block" href="#">XXX XXXX, Floor 4 San Francisco, CA <span class="text-teal-600 text-xs p-1"></span></a
+          <div class="text-sm uppercase text-lime-500 font-bold">Kontak Kami</div>
+          <a class="my-3 block" href="https://maps.app.goo.gl/UTswn9buZ5mqXPhg7"> Jl Kayu Putih Selatan III/2B Pulo Gadung Jakarta Timur, Indonesia<span class="text-teal-600 text-xs p-1"></span></a
           ><a class="my-3 block" href="mailto:0110224150@student.nurulfikri.ac.id">Puskesmas@Haza.com <span class="text-teal-600 text-xs p-1"></span></a>
         </div>
       </div>
     </div>
 
-    <div class="bg-gray-100 pt-2">
+    <div id="footer2" class="bg-gray-100 pt-2">
       <div class="flex pb-5 px-3 m-auto pt-5 border-t text-gray-800 text-sm flex-col max-w-screen-lg items-center">
         <div class="md:flex-auto md:flex-row-reverse mt-2 flex-row flex">
-          <a href="/#" class="w-6 mx-1">
+          <a href="#" class="w-6 mx-1">
             <svg
-              class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600"
+              class="fill-current cursor-pointer text-gray-500 hover:text-lime-500"
               width="100%"
               height="100%"
               viewBox="0 0 24 24"
@@ -688,7 +726,7 @@
           </a>
           <a href="/#" class="w-6 mx-1">
             <svg
-              class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600"
+              class="fill-current cursor-pointer text-gray-500 hover:text-lime-500"
               width="100%"
               height="100%"
               viewBox="0 0 24 24"
@@ -711,7 +749,7 @@
           </a>
           <a href="/#" class="w-6 mx-1">
             <svg
-              class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600"
+              class="fill-current cursor-pointer text-gray-500 hover:text-lime-500"
               width="100%"
               height="100%"
               viewBox="0 0 24 24"
@@ -747,7 +785,7 @@
           </a>
           <a href="/#" class="w-6 mx-1">
             <svg
-              class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600"
+              class="fill-current cursor-pointer text-gray-500 hover:text-lime-500"
               width="100%"
               height="100%"
               viewBox="0 0 24 24"
@@ -779,7 +817,7 @@
           </a>
           <a href="/#" class="w-6 mx-1">
             <svg
-              class="fill-current cursor-pointer text-gray-500 hover:text-indigo-600"
+              class="fill-current cursor-pointer text-gray-500 hover:text-lime-500"
               width="100%"
               height="100%"
               viewBox="0 0 24 24"
@@ -802,11 +840,42 @@
             </svg>
           </a>
         </div>
-        <div class="my-5">© Copyright 2020. All Rights Reserved.</div>
+        <div class="my-5">© Copyright Kelompok 1 2025 All Rights Reserved.</div>
       </div>
     </div>
     <!-- Bagian Footer End -->
+    <script>
+      // GSAP ScrollTrigger Animations
+      gsap.registerPlugin(ScrollTrigger);
 
-    <script src="../src/main.js"></script>
+      // General configuration
+      const sections = [
+        { id: '#hero', delay: 0.3, x: 0, y: 100, opacity: 0 },
+        { id: '#vision-mission', delay: 0.3, x: 0, y: 100, opacity: 0 },
+        { id: '#content', delay: 0.3, x: 0, y: 100, opacity: 0 },
+        { id: '#testimoni', delay: 0.3, x: 0, y: 100, opacity: 0 },
+        { id: '#berita', delay: 0.3, x: 0, y: 100, opacity: 0 },
+        { id: '#footer', delay: 0.4, x: -100, y: 0, opacity: 0 },
+        { id: '#footer2', delay: 0.4, x: -100, y: 0, opacity: 0 },
+      ];
+
+      // Animate each section
+      sections.forEach((section) => {
+        gsap.from(section.id, {
+          scrollTrigger: {
+            trigger: section.id,
+            start: 'top 80%', // Starts animation when section reaches 80% of viewport height
+            end: 'bottom 20%',
+            toggleActions: 'play none none reverse', // Play on enter, reverse on exit
+          },
+          duration: 1.5,
+          delay: section.delay,
+          x: section.x,
+          y: section.y,
+          opacity: section.opacity,
+          ease: 'power3.out',
+        });
+      });
+    </script>
   </body>
 </html>
