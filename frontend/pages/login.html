@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
+<head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link href="../src/output.css" rel="stylesheet" />
@@ -8,12 +8,48 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800;900&display=swap" rel="stylesheet" />
+    <style>
+      /* Animasi background */
+      @keyframes gradient {
+          0% { background-position: 0% 50%; }
+          50% { background-position: 100% 50%; }
+          100% { background-position: 0% 50%; }
+      }
+
+      .animate-gradient {
+          animation: gradient 15s ease infinite;
+          background-size: 200% 200%;
+      }
+
+      /* Styling dan animasi untuk gelembung */
+      .bubble {
+          position: absolute;
+          border-radius: 50%;
+          background: rgba(255, 255, 255, 0.6);
+          animation: float 8s infinite;
+          pointer-events: none;
+      }
+
+      @keyframes float {
+          0% { transform: translateY(0) translateX(0); }
+          25% { transform: translateY(-20px) translateX(20px); }
+          50% { transform: translateY(-40px) translateX(0); }
+          75% { transform: translateY(-20px) translateX(-20px); }
+          100% { transform: translateY(0) translateX(0); }
+      }
+  </style>
   </head>
 
-  <body class="flex font-poppins items-center justify-center h-screen bg-gradient-to-r from-lime-500 via-blue-500 to-purple-500 bg-[200%_200%]">
+  <body class="flex font-poppins items-center justify-center h-screen bg-[length:200%_200%] bg-gradient-to-tl from-lime-500 from-0% via-purple-100 via-50% to-indigo-500 to-100% animate-gradient relative overflow-hidden">
+    <!-- animasi bubble -->
+    <div class="bubble w-32 h-32" style="top: 10%; left: 10%;"></div>
+    <div class="bubble w-24 h-24" style="top: 20%; left: 80%;"></div>
+    <div class="bubble w-40 h-40" style="top: 60%; left: 15%;"></div>
+    <div class="bubble w-16 h-16" style="top: 70%; left: 70%;"></div>
+    <div class="bubble w-28 h-28" style="top: 40%; left: 40%;"></div>
+    <!-- end animasi -->
     <div class="flex justify-center items-center w-full h-full">
       <div class="grid gap-8">
-        <div id="back-div" class="bg-gradient-to-r from-white to-lime-500 rounded-[26px] m-4">
           <div class="border-[20px] border-transparent rounded-[20px] dark:bg-gray-900 bg-white shadow-lg xl:p-10 2xl:p-10 lg:p-10 md:p-10 sm:p-2 m-2">
             <h1 class="pt-8 pb-6 font-bold dark:text-gray-400 text-5xl text-center cursor-default">Log in</h1>
             <form action="#" method="post" class="space-y-4">
@@ -60,5 +96,15 @@
         ease: 'power1.inOut',
       });
     </script>
+    <script>
+      const bubbles = document.querySelectorAll('.bubble');
+      bubbles.forEach(bubble => {
+          const delay = Math.random() * 5;
+          bubble.style.animationDelay = `${delay}s`;
+          
+          const duration = 6 + Math.random() * 4;
+          bubble.style.animationDuration = `${duration}s`;
+      });
+  </script>
   </body>
 </html>
